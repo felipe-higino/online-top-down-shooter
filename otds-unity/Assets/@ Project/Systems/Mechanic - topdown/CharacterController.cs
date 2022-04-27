@@ -8,6 +8,11 @@ namespace OTDS.Mechanics.Topdown
 {
     public class CharacterController : MonoBehaviour, GameInputs.IGameplayActions
     {
+        [Space(15)]
+        [Header("Injected Dependencies")]
+
+        [SerializeField] private A_CharacterMovement characterMovement;
+
         public void OnAimPosition(InputAction.CallbackContext context)
         {
             var position = context.ReadValue<Vector2>();
@@ -17,7 +22,7 @@ namespace OTDS.Mechanics.Topdown
         public void OnMovement(InputAction.CallbackContext context)
         {
             var direction = context.ReadValue<Vector2>();
-            Debug.Log($"direction: {direction.x}, {direction.y}");
+            characterMovement.MoveDirection = direction;
         }
     }
 

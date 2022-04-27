@@ -11,15 +11,13 @@ namespace OTDS.Input
 {
     public class SwitchMap : MonoBehaviour
     {
-        [SerializeField] PlayerInput playerInput;
-
         public enum Maps
         {
             NoInput,
             Gameplay,
         }
-
-        public Maps selectedMap;
+        [SerializeField] public Maps selectedMap;
+        [SerializeField] private PlayerInput playerInput;
 
         private void ChangeMap()
         {
