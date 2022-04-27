@@ -10,19 +10,33 @@ namespace OTDS.Mechanics.Topdown
     {
         [Space(15)]
         [Header("Injected Dependencies")]
+        //TODO: DECOUPLE THIS
+        [SerializeField] Transform playerTransform;
+        //TODO: DECOUPLE THIS
+        private Camera m_Camera;
 
         [SerializeField] private A_CharacterMovement characterMovement;
+        [SerializeField] private A_CharacterAim characterAim;
+
+        private void Awake()
+        {
+            m_Camera = Camera.main;
+        }
 
         public void OnAimPosition(InputAction.CallbackContext context)
         {
-            var position = context.ReadValue<Vector2>();
-            Debug.Log($"position: {position.x}, {position.y}");
+            var mouseScreenPosition = context.ReadValue<Vector2>();
+            characterAim.AimDirection_Getter = () =>
+            {
+                var mouseWorldPosition = m_Camera.ScreenToWorldPoint(mouseScreenPosition);
+                return ((Vector2)mouseWorldPosition - (Vector2)playerTransform.position).normalized;
+            };
         }
 
         public void OnMovement(InputAction.CallbackContext context)
         {
-            var direction = context.ReadValue<Vector2>();
-            characterMovement.MoveDirection = direction;
+            var moveDirection = context.ReadValue<Vector2>();
+            characterMovement.MoveDirection = moveDirection;
         }
     }
 
