@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OTDS.Mechanics.Topdown
+namespace OTDS.Character
 {
     public abstract class A_CharacterAim : MonoBehaviour
     {

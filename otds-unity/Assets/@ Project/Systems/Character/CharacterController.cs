@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using OTDS.Input;
 
-namespace OTDS.Mechanics.Topdown
+namespace OTDS.Character
 {
     public class CharacterController : MonoBehaviour, GameInputs.IGameplayActions
     {
@@ -13,22 +13,17 @@ namespace OTDS.Mechanics.Topdown
         //TODO: DECOUPLE THIS
         [SerializeField] Transform playerTransform;
         //TODO: DECOUPLE THIS
-        private Camera m_Camera;
+        [SerializeField] Camera mainCamera;
 
         [SerializeField] private A_CharacterMovement characterMovement;
         [SerializeField] private A_CharacterAim characterAim;
-
-        private void Awake()
-        {
-            m_Camera = Camera.main;
-        }
 
         public void OnAimPosition(InputAction.CallbackContext context)
         {
             var mouseScreenPosition = context.ReadValue<Vector2>();
             characterAim.AimDirection_Getter = () =>
             {
-                var mouseWorldPosition = m_Camera.ScreenToWorldPoint(mouseScreenPosition);
+                var mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
                 return ((Vector2)mouseWorldPosition - (Vector2)playerTransform.position).normalized;
             };
         }

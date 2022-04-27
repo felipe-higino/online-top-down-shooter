@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OTDS.Mechanics.Topdown
+namespace OTDS.Character
 {
     public class NonAut_CharacterMovement : A_CharacterMovement
     {
