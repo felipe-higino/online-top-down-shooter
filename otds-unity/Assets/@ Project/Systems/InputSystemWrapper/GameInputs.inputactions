@@ -8,7 +8,7 @@
             "bindings": []
         },
         {
-            "name": "Gameplay",
+            "name": "Character",
             "id": "bc9808bf-33df-48bc-8f0c-bea67a904788",
             "actions": [
                 {
@@ -28,6 +28,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "41de2558-a2d5-4af6-b36d-d0bf153dd1ba",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -149,6 +158,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "AimPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4fbbdb8d-60a7-45c5-8b1a-7452edd78234",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
