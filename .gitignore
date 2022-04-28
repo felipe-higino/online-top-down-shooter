@@ -59,3 +59,4 @@ crashlytics-build.properties
 
 *.mp4
 *.mp4.meta
+otds-unity/Assets/Credentials/
