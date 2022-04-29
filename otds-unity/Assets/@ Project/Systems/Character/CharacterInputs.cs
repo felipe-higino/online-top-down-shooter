@@ -17,16 +17,18 @@ namespace OTDS.Character
         [SerializeField] Camera mainCamera;
 
 
-        [Space(15)]
-        [Header("Injected Dependencies")]
-        [SerializeField] private A_CharacterMovement characterMovement;
-        [SerializeField] private A_CharacterAim characterAim;
-        [SerializeField] private A_CharacterShoot characterShoot;
+        private A_CharacterMovement m_characterMovement;
+        private A_CharacterAim m_characterAim;
+        private A_CharacterShoot m_characterShoot;
 
         private GameInputs m_GameInputs;
 
         private void Awake()
         {
+            m_characterMovement = gameObject.ResolveComponent<A_CharacterMovement>();
+            m_characterAim = gameObject.ResolveComponent<A_CharacterAim>();
+            m_characterShoot = gameObject.ResolveComponent<A_CharacterShoot>();
+
             m_GameInputs = new GameInputs();
             m_GameInputs.Character.AimPosition.performed += OnAimPosition;
             m_GameInputs.Character.Movement.performed += OnMovement;
@@ -47,7 +49,7 @@ namespace OTDS.Character
         public void OnAimPosition(InputAction.CallbackContext context)
         {
             var mouseScreenPosition = context.ReadValue<Vector2>();
-            characterAim.AimDirection_Getter = () =>
+            m_characterAim.AimDirection_Getter = () =>
             {
                 var mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouseScreenPosition);
                 return ((Vector2)mouseWorldPosition - (Vector2)playerTransform.position).normalized;
@@ -57,12 +59,12 @@ namespace OTDS.Character
         public void OnMovement(InputAction.CallbackContext context)
         {
             var moveDirection = context.ReadValue<Vector2>();
-            characterMovement.MoveDirection = moveDirection;
+            m_characterMovement.MoveDirection = moveDirection;
         }
 
         public void OnShoot(InputAction.CallbackContext context)
         {
-            characterShoot.OpenFire();
+            m_characterShoot.OpenFire();
         }
     }
 

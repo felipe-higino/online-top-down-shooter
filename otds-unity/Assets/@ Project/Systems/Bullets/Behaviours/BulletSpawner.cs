@@ -29,8 +29,10 @@ namespace OTDS.Bullets
         //TODO: refactor to pool approach
         //TODO: networked instantiation
         //TODO: spawn in container networked
-        public void SpawnNewBullet(Transform spawnPoint)
+        public void SpawnNewBullet()
         {
+            Transform spawnPoint = transform;
+
             var bullet = Instantiate(prefab, BulletContainer.transform);
             bullet.transform.position = spawnPoint.position;
             bullet.transform.rotation = spawnPoint.rotation;
@@ -54,7 +56,7 @@ namespace OTDS.Bullets
                 {
                     if (GUILayout.Button(disable ? "Spawn New (OnlyPlayMode)" : "Spawn New"))
                     {
-                        script.SpawnNewBullet(script.transform);
+                        script.SpawnNewBullet();
                     }
                 }
                 base.OnInspectorGUI();

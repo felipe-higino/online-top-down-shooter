@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OTDS.Character
+namespace OTDS.Character.NonAuthoritary
 {
     public class NonAut_CharacterAim : A_CharacterAim
     {

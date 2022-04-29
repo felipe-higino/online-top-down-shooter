@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class _ComponentResolveExtension
 {
+    /// <summary>
+    /// <see cref="GameObject.GetComponent{T}"/> with log error  
+    /// </summary>
     public static T ResolveComponent<T>(this GameObject gameObject) where T : Component
     {
         var component = gameObject.GetComponent<T>();
