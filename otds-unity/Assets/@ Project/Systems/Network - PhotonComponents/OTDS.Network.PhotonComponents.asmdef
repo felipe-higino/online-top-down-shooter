@@ -1,8 +1,9 @@
 {
-    "name": "OTDS",
+    "name": "OTDS.Network.PhotonComponents",
     "rootNamespace": "",
     "references": [
-        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:57c32fc907df0f54e8e6e8f0d2488336",
+        "GUID:831409e8f9d13b5479a3baef9822ad34",
         "GUID:629aed6f86eef60438222d2f6efb76f7"
     ],
     "includePlatforms": [],
