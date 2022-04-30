@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using OTDS.Input;
+using Zenject;
 using System;
 
 namespace OTDS.Character
@@ -19,7 +20,8 @@ namespace OTDS.Character
 
         private A_CharacterMovement m_characterMovement;
         private A_CharacterAim m_characterAim;
-        private A_CharacterShoot m_characterShoot;
+        // private A_CharacterShoot m_characterShoot;
+        [Inject] private ICharacterShoot m_characterShoot;
 
         private GameInputs m_GameInputs;
 
@@ -27,7 +29,7 @@ namespace OTDS.Character
         {
             m_characterMovement = gameObject.ResolveComponent<A_CharacterMovement>();
             m_characterAim = gameObject.ResolveComponent<A_CharacterAim>();
-            m_characterShoot = gameObject.ResolveComponent<A_CharacterShoot>();
+            // m_characterShoot = gameObject.ResolveComponent<A_CharacterShoot>();
 
             m_GameInputs = new GameInputs();
             m_GameInputs.Character.AimPosition.performed += OnAimPosition;
