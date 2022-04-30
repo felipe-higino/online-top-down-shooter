@@ -126,8 +126,10 @@ GameObject:
   - component: {fileID: 5273114428837571924}
   - component: {fileID: -3175443126204142694}
   - component: {fileID: 8345695479600566512}
+  - component: {fileID: 3385846546097548467}
   - component: {fileID: 8936515151930688133}
   - component: {fileID: 414688596314377591}
+  - component: {fileID: 4931452552307701658}
   m_Layer: 0
   m_Name: NetworkedAvatar
   m_TagString: Untagged
@@ -191,6 +193,18 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &3385846546097548467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598393412082427505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07dbc3aebb8273843a4ebac4532a9092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8936515151930688133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,3 +236,15 @@ MonoBehaviour:
   photonView: {fileID: -3175443126204142694}
   slaveTransform: {fileID: 5273114428837571924}
   masterTransform: {fileID: 0}
+--- !u!114 &4931452552307701658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5598393412082427505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e41333884a905b49b78bc21f4d92907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

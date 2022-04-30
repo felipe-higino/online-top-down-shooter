@@ -9,10 +9,13 @@ namespace OTDS.Network.PhotonComponents
     {
         private GameObject m_instantiatedAvatar;
 
+        //when you join the room
         public override void OnJoinedRoom()
         {
             //TODO: get spawn points
-            m_instantiatedAvatar = PhotonNetwork.Instantiate("NetworkedAvatar", transform.position, transform.rotation);
+
+            //delegates to photon sync the prefab instantiation
+            m_instantiatedAvatar = PhotonNetwork.Instantiate($"NetworkedAvatar", transform.position, transform.rotation);
         }
 
         public override void OnLeftRoom()

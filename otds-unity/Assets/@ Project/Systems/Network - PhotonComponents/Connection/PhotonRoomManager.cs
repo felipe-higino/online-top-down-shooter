@@ -16,6 +16,7 @@ namespace OTDS.Network.PhotonComponents
 
         public void JoinDefaultRoom()
         {
+            //TODO: customize room Options
             var roomOptions = new RoomOptions
             {
                 IsVisible = true,
