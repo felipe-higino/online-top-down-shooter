@@ -18,6 +18,11 @@ namespace OTDS.Bullets.Interfaces
         private float bulletSpawnOffset;
         public float BulletSpawnOffset => bulletSpawnOffset;
 
+        [Min(1)]
+        [SerializeField]
+        private float bulletLifetime;
+        public float BulletLifetime => bulletLifetime;
+
         #endregion -------- BALANCING DATA --------
 
 

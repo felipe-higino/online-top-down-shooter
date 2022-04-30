@@ -1529,3 +1529,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3138f815e59d4c64b991b66150a8a0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  __toRefactor__: {fileID: 11400000, guid: 1b126ab6f3452a74e8a738b8b3c30436, type: 2}

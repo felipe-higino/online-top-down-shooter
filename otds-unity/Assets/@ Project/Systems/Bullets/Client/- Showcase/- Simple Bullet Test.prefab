@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 1544136488116864405}
   - component: {fileID: 3260983495621829214}
   m_Layer: 0
-  m_Name: Simple Bullet Test
+  m_Name: '- Simple Bullet Test'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
