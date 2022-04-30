@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0910a14f79c876441813b39d1ae63b9c, type: 3}
+  m_Name: Weapon 1
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 11400000, guid: 85f5a24ff7331d04b8cbe3aa6655aca4, type: 2}
+  maxBulletsCount: 30
+  gunVisual: {fileID: 0}

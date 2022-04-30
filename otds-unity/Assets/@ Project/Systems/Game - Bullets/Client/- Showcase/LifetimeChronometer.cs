@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OTDS.Bullets.Client
+namespace OTDS.Bullets.Client.Showcase
 {
     public class LifetimeChronometer : MonoBehaviour
     {

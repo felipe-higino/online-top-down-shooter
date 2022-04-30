@@ -7,8 +7,7 @@ namespace OTDS.Bullets.Interfaces
     [CreateAssetMenu(fileName = "SO_BulletData", menuName = "otds-unity/SO_BulletData", order = 0)]
     public class SO_BulletData : ScriptableObject
     {
-        #region -------- BALANCING DATA --------
-
+        [Header("--- Balancing data ---")]
         [SerializeField]
         private float startVelocity;
         public float StartVelocity => startVelocity;
@@ -23,17 +22,13 @@ namespace OTDS.Bullets.Interfaces
         private float bulletLifetime;
         public float BulletLifetime => bulletLifetime;
 
-        #endregion -------- BALANCING DATA --------
+        [Space(15)]
+        [Header("---- Client data ----")]
 
-
-        #region -------- CLIENT DATA --------
-
-        //client data
         [SerializeField]
         private GameObject bulletVisualPrefab;
         public GameObject BulletVisualPrefab => bulletVisualPrefab;
 
-        #endregion -------- CLIENT DATA --------
 
     }
 }
