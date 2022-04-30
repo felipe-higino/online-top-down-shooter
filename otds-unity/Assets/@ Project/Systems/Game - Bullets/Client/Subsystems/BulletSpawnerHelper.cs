@@ -8,7 +8,7 @@ using Zenject;
 using UnityEditor;
 #endif
 
-namespace OTDS.Bullets.Client.Showcase
+namespace OTDS.Bullets.Client.Subsystems
 {
     public class BulletSpawnerHelper : MonoBehaviour
     {

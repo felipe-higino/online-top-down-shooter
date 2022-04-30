@@ -24,11 +24,6 @@ namespace OTDS.Network.PhotonComponents.Implementations
             var bulletDataResolver = bulletInstance.GetComponent<BulletDataResolver>();
             bulletDataResolver.Init(bulletData);
         }
-
-        //TODO: BULLET LIFECYCLE
-        //TODO: CURRENT GUN SPAWN APPROACH
-        //TODO: SPAWN RATE
-
     }
 
 }

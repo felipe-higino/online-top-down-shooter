@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
-namespace OTDS.Bullets.Client.Showcase
+namespace OTDS.Bullets.Client.Subsystems
 {
     public class LifetimeChronometer : MonoBehaviour
     {
-        //TODO: extract to scriptable object 
-        [SerializeField] private float secondsLifetime;
+        [Inject] private Func<float> GetSecondsLifetime;
 
         private void Start()
         {
@@ -17,7 +17,7 @@ namespace OTDS.Bullets.Client.Showcase
 
         private IEnumerator Chronometer()
         {
-            yield return new WaitForSeconds(secondsLifetime);
+            yield return new WaitForSeconds(GetSecondsLifetime());
             //TODO: networked destroy
             Destroy(gameObject);
         }

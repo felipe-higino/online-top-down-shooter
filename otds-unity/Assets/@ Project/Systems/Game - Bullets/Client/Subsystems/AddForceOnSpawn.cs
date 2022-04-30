@@ -1,20 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace OTDS.Bullets.Client.Showcase
+using Zenject;
+namespace OTDS.Bullets.Client.Subsystems
 {
     public class AddForceOnSpawn : MonoBehaviour
     {
-        //TODO: extract to ScriptableObject data
-        [SerializeField] private float forceScale;
+        [Inject] private Func<float> GetForceScale;
 
         [SerializeField] private Rigidbody2D rigidBody;
 
         //TODO: networked add force?
         void Start()
         {
-            rigidBody.AddForce(transform.right * forceScale);
+            rigidBody.AddForce(transform.right * GetForceScale());
         }
     }
 

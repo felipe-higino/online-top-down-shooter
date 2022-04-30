@@ -22,6 +22,7 @@ namespace OTDS.Network.PhotonComponents
             BulletLifetime(bulletData.bulletLifetime);
         }
 
+
         private void Movement(float startVelocity, Vector2 direction)
         {
             rb.AddForce(direction * startVelocity);
@@ -38,6 +39,9 @@ namespace OTDS.Network.PhotonComponents
             yield return new WaitForSeconds(m_secondsLifetime);
             PhotonNetwork.Destroy(gameObject);
         }
+
+        //TODO: CURRENT GUN SPAWN APPROACH
+        //TODO: SPAWN RATE
     }
 
 }
