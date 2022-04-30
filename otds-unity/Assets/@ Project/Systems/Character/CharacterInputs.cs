@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using OTDS.Input;
 using Zenject;
 using System;
+using OTDS.Character.Interfaces;
 
 namespace OTDS.Character
 {

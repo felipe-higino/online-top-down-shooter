@@ -10,13 +10,17 @@ namespace OTDS.Network.PhotonComponents.Implementations
     public class RPC_CharacterShoot : MonoBehaviourPun
     {
         [PunRPC]
-        private void Broadcast_OpenFire()
+        private void Broadcast_OpenFire(PhotonMessageInfo info)
         {
             Debug.Log($"{gameObject.name}: {photonView.Owner.ToString()}: Requested Open Fire");
+
             //READ SERVER-SIDE PLAYER DATA
             //TODO: INSTANTIATE CORRECT BULLET PREFAB (PLAYER GUN)
-            //TODO: CORRECT POSITION (PLAYER SERVER-SIDE BULLET SPAWN POSITION)
             //TODO: CALCULATE BULLET PHYSICS AND COLLISIONS SERVER-SIDE
+            //TODO: CORRECT POSITION (PLAYER SERVER-SIDE BULLET SPAWN POSITION)
+
+            var bulletTransform = info.photonView.transform;
+            PhotonNetwork.Instantiate("Bullet", bulletTransform.position, bulletTransform.rotation);
         }
     }
 

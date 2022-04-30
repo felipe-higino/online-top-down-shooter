@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OTDS.Character.Interfaces;
 
 namespace OTDS.Character.NonAuthoritary
 {
-    public class NonAut_CharacterShoot : A_CharacterShoot
+    public class NonAut_CharacterShoot : MonoBehaviour, ICharacterShoot
     {
         //make dynamiacally assigned, instead of serialized 
         [SerializeField] Transform bulletSpawnPoint;
 
-        public override void OpenFire()
+        public void CloseFire()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void OpenFire()
         {
             if (enabled)
             {

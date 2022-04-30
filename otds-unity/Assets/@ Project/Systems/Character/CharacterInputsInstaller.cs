@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Zenject;
+using OTDS.Character.Interfaces;
 
 namespace OTDS.Character
 {
@@ -10,9 +11,8 @@ namespace OTDS.Character
         {
             //shoot mechanic logic
             Container.Bind<ICharacterShoot>()
-                .FromInstance(new NonAuthoritary.NonAut_ICharacterShoot())
+                .FromComponentInHierarchy()
                 .AsSingle();
-
         }
     }
 }
