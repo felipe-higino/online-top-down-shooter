@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using OTDS.Character.Interfaces;
-using OTDS.Bullets.Interfaces;
 using Photon.Pun;
 using UnityEngine;
 using Zenject;
@@ -10,8 +9,6 @@ namespace OTDS.Network.PhotonComponents.Implementations
 {
     public class PUN_ICharacterShoot : MonoBehaviour, ICharacterShoot
     {
-        [Inject] private IBulletSpawner bulletSpawner;
-
         public void CloseFire()
         {
             throw new System.NotImplementedException();
@@ -24,7 +21,7 @@ namespace OTDS.Network.PhotonComponents.Implementations
             if (isValid)
             {
                 //TODO: SPAWN CURRENT BULLET
-                bulletSpawner.SpawnNewBullet();
+                // bulletSpawner.SpawnNewBullet();
                 // S_NetworkedAvatar.Instance.photonView.RPC("Broadcast_OpenFire", RpcTarget.All);
             }
         }

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Zenject;
+using OTDS.Bullets.Client.Subsystems;
 
 namespace OTDS.Bullets.Client.Data
 {
@@ -10,13 +11,11 @@ namespace OTDS.Bullets.Client.Data
 
         public override void InstallBindings()
         {
-            Container.Bind<Func<float>>()
-                .FromInstance(() => data.BulletLifetime)
-                .WhenInjectedInto<Subsystems.LifetimeChronometer>();
+            Container.Bind<ILifetimeChronometer>()
+                .FromInstance(data);
 
-            Container.Bind<Func<float>>()
-                .FromInstance(() => data.StartVelocity)
-                .WhenInjectedInto<Subsystems.AddForceOnSpawn>();
+            Container.Bind<IAddForceOnSpawn>()
+                .FromInstance(data);
         }
     }
 }
