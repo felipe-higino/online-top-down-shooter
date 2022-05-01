@@ -58,4 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1e797f3d2a61042aa13bbca477e286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoJoinRoomOnConnect: 0
+  autoJoinRoomOnConnect: 1

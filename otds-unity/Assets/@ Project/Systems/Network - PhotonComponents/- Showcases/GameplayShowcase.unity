@@ -178,10 +178,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5223627597050955763, guid: e53bdac500de2e84ba18521e20313456, type: 3}
-      propertyPath: autoJoinRoomOnConnect
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e53bdac500de2e84ba18521e20313456, type: 3}
 --- !u!1 &14752047
@@ -279,7 +275,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6369295, y: 1}
+    m_SensorSize: {x: 1.8091286, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

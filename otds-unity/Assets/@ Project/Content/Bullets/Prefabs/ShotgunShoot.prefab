@@ -9,6 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8802271797119458667}
+  - component: {fileID: 1234934894862893162}
+  - component: {fileID: 1961514144636545638}
+  - component: {fileID: 168339673239964556}
+  - component: {fileID: 6715208096102121536}
   m_Layer: 0
   m_Name: ShotgunShoot
   m_TagString: Untagged
@@ -34,6 +38,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1234934894862893162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802271797119458666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88add1333649e0a4e837556287a8937e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: cd2fa82c07b6b0b419b3d2842436b54c, type: 2}
+--- !u!114 &1961514144636545638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802271797119458666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 1234934894862893162}
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}
+--- !u!114 &168339673239964556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802271797119458666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 0
+--- !u!114 &6715208096102121536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8802271797119458666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f116491d2d479ec4da0ef98e3028e90a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnityDestroy: 1
+  OnTimeout:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &3008683158457346079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,7 +153,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1621927380617497320, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
 --- !u!4 &2678583897353013670 stripped
 Transform:
@@ -151,7 +216,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1621927380617497320, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
 --- !u!4 &8559991767810743321 stripped
 Transform:
@@ -213,7 +279,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1621927380617497320, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88b0126a087f86c4abf5a21495b00ee3, type: 3}
 --- !u!4 &8559991766994410424 stripped
 Transform:
