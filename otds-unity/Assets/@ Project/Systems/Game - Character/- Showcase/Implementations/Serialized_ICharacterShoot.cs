@@ -7,10 +7,15 @@ namespace OTDS.Character.Showcase
 
     public class Serialized_ICharacterShoot : MonoBehaviour, Interfaces.ICharacterShoot
     {
-        [SerializeField] Transform bulletSpawnPoint;
         [SerializeField] GameObject bulletPrefab;
         [SerializeField] float spawnInterval = 1;
         private bool isOpen = false;
+
+        private Transform m_characterTransform;
+        private void Awake()
+        {
+            m_characterTransform = GameObject.Find("<p> playerTransform").transform;
+        }
 
         public void CloseFire()
         {
@@ -35,7 +40,7 @@ namespace OTDS.Character.Showcase
 
         private void NewBullet()
         {
-            Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+            Instantiate(bulletPrefab, m_characterTransform.position, m_characterTransform.rotation);
         }
 
         private void OnEnable() { }

@@ -1,8 +1,7 @@
 {
-    "name": "OTDS.Weapons.Client",
+    "name": "OTDS.Weapons.Showcase",
     "rootNamespace": "",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
         "GUID:73896ff26bc393942bf9caf08392b0ee"
     ],
     "includePlatforms": [],

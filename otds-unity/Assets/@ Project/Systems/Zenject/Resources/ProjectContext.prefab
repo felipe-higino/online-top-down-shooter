@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5542166005046536445}
   - component: {fileID: 3810193826729113205}
   m_Layer: 0
-  m_Name: CharacterInputsInstaller
+  m_Name: Character Installers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
-  _monoInstallers: []
+  _monoInstallers:
+  - {fileID: 0}
   _installerPrefabs: []
   _parentNewObjectsUnderContext: 1
   _editorReflectionBakingCoverageMode: 0

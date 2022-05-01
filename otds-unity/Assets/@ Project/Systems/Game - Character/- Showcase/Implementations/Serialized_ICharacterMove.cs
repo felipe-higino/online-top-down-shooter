@@ -10,8 +10,13 @@ namespace OTDS.Character.Showcase
         public Vector2 MoveDirection { get; set; } = Vector2.zero;
 
 
-        [SerializeField] private Transform characterTransform;
         [SerializeField] private float velocity = 1f;
+
+        private Transform m_characterTransform;
+        private void Awake()
+        {
+            m_characterTransform = GameObject.Find("<p> playerTransform").transform;
+        }
 
         private void Update()
         {
@@ -21,7 +26,7 @@ namespace OTDS.Character.Showcase
         private void UpdatePosition()
         {
             var direction2D = new Vector3(MoveDirection.x, MoveDirection.y, 0);
-            characterTransform.position += direction2D * velocity * Time.deltaTime;
+            m_characterTransform.position += direction2D * velocity * Time.deltaTime;
         }
 
     }

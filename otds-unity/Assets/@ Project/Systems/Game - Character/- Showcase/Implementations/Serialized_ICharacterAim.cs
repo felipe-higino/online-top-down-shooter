@@ -10,15 +10,19 @@ namespace OTDS.Character.Showcase
     {
         public Func<Vector2> AimDirectionGetter { get; set; } = () => Vector2.zero;
 
-        [SerializeField] Transform characterTransform;
+        private Transform m_characterTransform;
+        private void Awake()
+        {
+            m_characterTransform = GameObject.Find("<p> playerTransform").transform;
+        }
 
         private void Update()
         {
             var aimDirection = AimDirectionGetter();
             var zAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-            characterTransform.eulerAngles = new Vector3(0, 0, zAngle);
+            m_characterTransform.eulerAngles = new Vector3(0, 0, zAngle);
 
-            Debug.DrawLine(characterTransform.position, characterTransform.position + ((Vector3)aimDirection * 5));
+            Debug.DrawLine(m_characterTransform.position, m_characterTransform.position + ((Vector3)aimDirection * 5));
         }
     }
 
