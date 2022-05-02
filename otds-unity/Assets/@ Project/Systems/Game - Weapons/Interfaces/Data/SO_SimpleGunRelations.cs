@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace OTDS.Weapons.Data
 {
@@ -20,7 +21,7 @@ namespace OTDS.Weapons.Data
     public class SimpleGunRelationsTable
     {
         [SerializeField] private BulletSimplegunSchema[] list;
-        public IEnumerable List => list;
+        public IEnumerable<BulletSimplegunSchema> List => list;
     }
 
     [CreateAssetMenu(fileName = "SO_BulletSimpleGun", menuName = "ScriptableObjects/Schemas/SO_BulletSimpleGun", order = 0)]
@@ -29,6 +30,20 @@ namespace OTDS.Weapons.Data
         [SerializeField]
         private SimpleGunRelationsTable table;
         public SimpleGunRelationsTable Table => table;
+
+        //Queries
+        public BulletSimplegunSchema Find(Data.SO_SimpleGun gunID)
+        {
+            var dataToSpawn = Table.List.First(x => x.Data == gunID);
+            if (null == dataToSpawn)
+            {
+                return null;
+            }
+            else
+            {
+                return dataToSpawn;
+            }
+        }
 
     }
 }
