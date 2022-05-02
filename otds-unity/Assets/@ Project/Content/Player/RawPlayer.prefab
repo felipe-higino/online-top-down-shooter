@@ -158,8 +158,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1330731543
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1662630959, guid: 91381739bdf093b4786b6590b491eece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -469,7 +469,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5475729, y: 1}
+    m_SensorSize: {x: 1.6078838, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
