@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781907e62adccdb48be44e26d9e97ba2, type: 3}
   m_Name: RifleBullet
   m_EditorClassIdentifier: 
-  startVelocity: 300
-  bulletLifetime: 4
+  data:
+    startVelocity: 300
+    bulletLifetime: 4

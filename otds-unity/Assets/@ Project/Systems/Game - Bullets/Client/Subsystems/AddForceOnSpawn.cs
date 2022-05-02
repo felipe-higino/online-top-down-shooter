@@ -4,22 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-namespace OTDS.Bullets.Client.Subsystems
+namespace OTDS.Bullets.Client
 {
-    public interface IAddForceOnSpawn
-    {
-        float ForceScale { get; }
-    }
-
     public class AddForceOnSpawn : MonoBehaviour
     {
-        [Inject] IAddForceOnSpawn values;
-        [SerializeField] private Rigidbody2D rigidBody;
+        // [Inject] Interfaces.IAddForceOnSpawn values;
+        // [SerializeField] private Rigidbody2D rigidBody;
 
-        void Start()
-        {
-            rigidBody.AddForce(transform.right * values.ForceScale);
-        }
+        // void Start()
+        // {
+        //     rigidBody.AddForce(transform.right * values.ForceScale);
+        // }
     }
 
 }

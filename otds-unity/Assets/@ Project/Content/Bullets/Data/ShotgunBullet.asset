@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781907e62adccdb48be44e26d9e97ba2, type: 3}
   m_Name: ShotgunBullet
   m_EditorClassIdentifier: 
-  startVelocity: 80
-  bulletLifetime: 1
+  data:
+    startVelocity: 80
+    bulletLifetime: 1

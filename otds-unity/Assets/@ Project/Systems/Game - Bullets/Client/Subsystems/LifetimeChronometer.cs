@@ -5,32 +5,71 @@ using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
 
-namespace OTDS.Bullets.Client.Subsystems
-{
-    public interface ILifetimeChronometer
-    {
-        float SecondsLifetime { get; }
-    }
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
+namespace OTDS.Bullets.Client
+{
     public class LifetimeChronometer : MonoBehaviour
     {
-        [Inject] private ILifetimeChronometer values;
+        [Inject] private Interfaces.ILifetimeChronometerParams parameters;
+        [Inject] private Interfaces.ILifetimeChronometerService chronometer;
 
         [SerializeField] private bool UnityDestroy = false;
         [SerializeField] private UnityEvent OnTimeout;
 
-        private void Start()
+        private void OnEnable()
         {
-            StartCoroutine(Chronometer());
+            StartChronometer();
         }
 
-        private IEnumerator Chronometer()
+        private void StartChronometer()
         {
-            yield return new WaitForSeconds(values.SecondsLifetime);
-            if (UnityDestroy)
-                Destroy(gameObject);
-
-            OnTimeout.Invoke();
+            chronometer.StartTimer(
+                parameters: parameters,
+                End: OnEnd
+            );
         }
+
+        private void OnEnd(bool didSuccess)
+        {
+            if (!didSuccess)
+            {
+                Debug.LogError("fail to start timer");
+            }
+            else
+            {
+                if (UnityDestroy)
+                    Destroy(gameObject);
+                OnTimeout.Invoke();
+            }
+        }
+
+#if UNITY_EDITOR
+        [CustomEditor(typeof(LifetimeChronometer))]
+        public class LifetimeChronometerEditor : Editor
+        {
+            LifetimeChronometer script;
+            private void OnEnable()
+            {
+                script = (LifetimeChronometer)target;
+            }
+
+            public override void OnInspectorGUI()
+            {
+                var disable = !Application.isPlaying;
+                using (new EditorGUI.DisabledGroupScope(disable))
+                {
+                    if (GUILayout.Button(disable ? "Start Chronometer (OnlyPlayMode)" : "Start Chronometer"))
+                    {
+                        script.StartChronometer();
+                    }
+                }
+                base.OnInspectorGUI();
+            }
+        }
+#endif
+
     }
 }

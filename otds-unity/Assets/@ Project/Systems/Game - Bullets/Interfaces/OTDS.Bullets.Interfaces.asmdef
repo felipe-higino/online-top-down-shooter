@@ -1,10 +1,7 @@
 {
-    "name": "OTDS.Bullets.Client",
+    "name": "OTDS.Bullets.Interfaces",
     "rootNamespace": "",
-    "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:48e3b06ee1a38b540aad24784d65a977"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

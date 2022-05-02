@@ -8,7 +8,7 @@ namespace OTDS.Weapons.Showcase
     {
         public void SpawnBullet(Transform location, GameObject bulletPrefab)
         {
-            Instantiate(bulletPrefab, location.position, location.rotation);
+            var instance = Instantiate(bulletPrefab, location.position, location.rotation);
         }
     }
 }

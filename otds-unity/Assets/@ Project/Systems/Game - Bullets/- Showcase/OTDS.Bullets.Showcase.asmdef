@@ -1,7 +1,9 @@
 {
     "name": "OTDS.Bullets.Showcase",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:48e3b06ee1a38b540aad24784d65a977"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
