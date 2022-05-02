@@ -18,8 +18,6 @@ namespace OTDS.PlayerState.Showcase
         // [field: SerializeField] public GameObject BulletPrefab { get; set; }
 
         public static S_ScenePlayerState Instance { get; private set; }
-
-
         private void Awake()
         {
             if (null != Instance)

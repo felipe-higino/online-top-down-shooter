@@ -21,7 +21,7 @@ namespace OTDS.Bullets.Interfaces
     public interface IAddBulletImpulseServiceParams
     {
         float ForceScale { get; }
-        Rigidbody2D Rigidbody { get; }
+        Rigidbody2D Rigidbody { get; set; }
     }
 
     public interface IAddBulletImpulseService

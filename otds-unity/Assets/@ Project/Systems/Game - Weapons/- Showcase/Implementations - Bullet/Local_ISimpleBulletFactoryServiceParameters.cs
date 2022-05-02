@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using OTDS.Bullets.Interfaces;
 using UnityEngine;
 
-namespace OTDS.Bullets.Showcase
+namespace OTDS.Weapons.Showcase
 {
-    public class Local_ISimpleBulletFactoryServiceParameters : MonoBehaviour, Interfaces.ISimpleBulletFactoryServiceParameters
+    public class Local_ISimpleBulletFactoryServiceParameters : MonoBehaviour, Bullets.Interfaces.ISimpleBulletFactoryServiceParameters
     {
-        public GameObject BulletPrefab => null;
-        public Transform BulletSpawnLocation => null;
-        public ILifetimeChronometerParams ChronometerParams => null;
-        public IAddBulletImpulseServiceParams ImpulseParams => null;
-
+        public GameObject BulletPrefab => S_GunPlayerState.Instance.BulletPrefab;
+        public Transform BulletSpawnLocation => S_GunPlayerState.Instance.BulletSpawnLocation;
+        public ILifetimeChronometerParams ChronometerParams => S_GunPlayerState.Instance.ChronometerParams;
+        public IAddBulletImpulseServiceParams ImpulseParams => S_GunPlayerState.Instance.ImpulseParams;
     }
 
 }

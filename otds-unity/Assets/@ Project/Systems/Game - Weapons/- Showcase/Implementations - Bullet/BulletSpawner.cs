@@ -9,9 +9,8 @@ using UnityEditor;
 
 namespace OTDS.Weapons.Showcase
 {
-    public class SpawnBullet : MonoBehaviour
+    public class BulletSpawner : MonoBehaviour
     {
-
         [Inject] private Bullets.Interfaces.ISimpleBulletFactoryService simpleBulletFactory;
         // [Inject] private Interfaces.ISimpleGunsDatabaseGetter databaseGetter;
 
@@ -21,13 +20,13 @@ namespace OTDS.Weapons.Showcase
         }
 
 #if UNITY_EDITOR
-        [CustomEditor(typeof(SpawnBullet))]
+        [CustomEditor(typeof(BulletSpawner))]
         public class SpawnBulletEditor : Editor
         {
-            SpawnBullet script;
+            BulletSpawner script;
             private void OnEnable()
             {
-                script = (SpawnBullet)target;
+                script = (BulletSpawner)target;
             }
 
             public override void OnInspectorGUI()

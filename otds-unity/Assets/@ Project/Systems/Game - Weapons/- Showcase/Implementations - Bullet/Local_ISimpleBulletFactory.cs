@@ -13,13 +13,13 @@ namespace OTDS.Bullets.Showcase
         [Inject] public Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
         [Inject] public ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
 
-        // [Inject]
-        // public ILifetimeChronometerService lifetimeChronometerService { get; }
-        // private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
+        [Inject]
+        public ILifetimeChronometerService lifetimeChronometerService { get; }
+        private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
 
-        // [Inject] 
-        // public IAddBulletImpulseService addBulletImpulseService { get; }
-        // private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
+        [Inject]
+        public IAddBulletImpulseService addBulletImpulseService { get; }
+        private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
 
         private GameObject prefab => simpleBulletFactoryParams.BulletPrefab;
         private Transform location => simpleBulletFactoryParams.BulletSpawnLocation;
@@ -30,16 +30,18 @@ namespace OTDS.Bullets.Showcase
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);
 
             //timer 
-            // lifetimeChronometerService.StartTimer(
-            //     parameters: m_chronometerParams,
-            //     End: (success) =>
-            //     {
-            //         prefabInstantiationService.TryDestroy(instance);
-            //     }
-            // );
+            lifetimeChronometerService.StartTimer(
+                parameters: m_chronometerParams,
+                End: (success) =>
+                {
+                    prefabInstantiationService.TryDestroy(instance);
+                }
+            );
 
-            //impulse 
-            // addBulletImpulseService.AddBulletImpulse(m_impulseParams);
+            //impulse
+            var rb = instance.GetComponent<Rigidbody2D>();
+            m_impulseParams.Rigidbody = rb;
+            addBulletImpulseService.AddBulletImpulse(m_impulseParams);
         }
     }
 

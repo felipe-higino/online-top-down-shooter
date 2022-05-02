@@ -27,6 +27,34 @@ namespace OTDS.Weapons.Showcase
             var gunSpawnPoint = playerState.GunSpawnPoint;
             var instance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
             instance.transform.SetParent(gunSpawnPoint);
+
+            //setup GunState 
+            var bulletPrefab = gunToSpawn.BulletPrefab;
+            var bulletSpawnPoint = instance.transform.Find("<p> BulletSpawnPoint");
+            var chronometerParams = new ChronometerParams
+            {
+                Time = gunToSpawn.Data.Data.BulletData.Data.SecondsLifetime
+            };
+            var impulseParams = new ImpulseParams()
+            {
+                ForceScale = gunToSpawn.Data.Data.BulletData.Data.ForceScale
+            };
+
+            S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;
+            S_GunPlayerState.Instance.BulletSpawnLocation = bulletSpawnPoint;
+            S_GunPlayerState.Instance.ChronometerParams = chronometerParams;
+            S_GunPlayerState.Instance.ImpulseParams = impulseParams;
+        }
+
+        private class ChronometerParams : Bullets.Interfaces.ILifetimeChronometerParams
+        {
+            public float Time { set; get; }
+        }
+
+        private class ImpulseParams : Bullets.Interfaces.IAddBulletImpulseServiceParams
+        {
+            public float ForceScale { get; set; }
+            public Rigidbody2D Rigidbody { get; set; }
         }
 
 #if UNITY_EDITOR

@@ -15,8 +15,7 @@ namespace OTDS.Bullets.Showcase
 
         private void AddBulletImpulse(float forceScale, Rigidbody2D rigidbody)
         {
-            //no verifications, client-authority
-            rigidbody.AddForce(transform.right * forceScale);
+            rigidbody.AddForce(rigidbody.transform.right * forceScale);
         }
     }
 
