@@ -9,6 +9,14 @@ namespace OTDS.Bullets.Client
             Container.Bind<Interfaces.ILifetimeChronometerService>()
                 .FromComponentInHierarchy()
                 .AsSingle();
+
+            Container.Bind<Interfaces.A_BulletFactory>()
+                .FromComponentInHierarchy()
+                .AsSingle();
+
+            Container.Bind<Interfaces.IAddBulletImpulseService>()
+                .FromComponentInHierarchy()
+                .AsSingle();
         }
     }
 }

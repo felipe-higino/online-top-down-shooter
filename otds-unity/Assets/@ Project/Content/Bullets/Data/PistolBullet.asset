@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PistolBullet
   m_EditorClassIdentifier: 
   data:
+    lifetime: 1
     startVelocity: 150
     bulletLifetime: 4

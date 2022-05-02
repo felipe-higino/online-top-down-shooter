@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1234934894862893162}
   - component: {fileID: 1961514144636545638}
   - component: {fileID: 168339673239964556}
-  - component: {fileID: 6715208096102121536}
   m_Layer: 0
   m_Name: ShotgunShoot
   m_TagString: Untagged
@@ -82,22 +81,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _containerSource: 0
---- !u!114 &6715208096102121536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8802271797119458666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f116491d2d479ec4da0ef98e3028e90a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UnityDestroy: 1
-  OnTimeout:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &3008683158457346079
 PrefabInstance:
   m_ObjectHideFlags: 0

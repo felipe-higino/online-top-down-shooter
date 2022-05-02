@@ -28,9 +28,9 @@ namespace OTDS.Weapons.Showcase
         private IEnumerator AttackGate()
         {
             canAttack = false;
-            yield return new WaitForSeconds(knifeData.timeVisible);
+            yield return new WaitForSeconds(knifeData.TimeVisible);
             endAction.Invoke();
-            yield return new WaitForSeconds(knifeData.recoverTime);
+            yield return new WaitForSeconds(knifeData.RecoverTime);
             canAttack = true;
         }
     }

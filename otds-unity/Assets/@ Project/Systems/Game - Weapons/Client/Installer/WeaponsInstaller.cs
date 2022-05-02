@@ -9,9 +9,6 @@ namespace OTDS.Weapons.Client
     {
         public override void InstallBindings()
         {
-            Container.Bind<Interfaces.IBulletSpawnerService>()
-                .FromComponentInHierarchy()
-                .AsSingle();
 
             Container.Bind<Interfaces.IKnifeAttack>()
                 .FromComponentInHierarchy()

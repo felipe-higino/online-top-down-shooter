@@ -1,3 +1,16 @@
 {
-	"name": "OTDS.Weapons.Interfaces"
+    "name": "OTDS.Weapons.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:48e3b06ee1a38b540aad24784d65a977"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

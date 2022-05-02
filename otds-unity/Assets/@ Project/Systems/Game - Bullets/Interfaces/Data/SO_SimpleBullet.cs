@@ -8,15 +8,13 @@ using UnityEngine;
 namespace OTDS.Bullets.Data
 {
     [System.Serializable]
-    public class BulletData
+    public class BulletData : A_Bullet
     {
-        [SerializeField]
-        private float startVelocity;
-        public float ForceScale => startVelocity;
-
+        [SerializeField] private float startVelocity;
         [Min(1)]
-        [SerializeField]
-        private float bulletLifetime;
+        [SerializeField] private float bulletLifetime;
+
+        public float ForceScale => startVelocity;
         public float SecondsLifetime => bulletLifetime;
     }
 

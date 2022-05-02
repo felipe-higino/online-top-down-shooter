@@ -1,6 +1,5 @@
 using UnityEngine;
 using Zenject;
-using OTDS.Weapons.Interfaces;
 
 namespace OTDS.Weapons.Client
 {
@@ -9,7 +8,6 @@ namespace OTDS.Weapons.Client
     {
         [SerializeField] private Data.SO_SimpleGun data;
         [SerializeField] private Transform bulletSpawnPoint;
-        [SerializeField] private GameObject bulletPrefab;
 
         public override void InstallBindings()
         {
@@ -24,7 +22,11 @@ namespace OTDS.Weapons.Client
 
             Container.Bind<GameObject>()
                 .WithId("bullet prefab")
-                .FromInstance(bulletPrefab)
+                .FromInstance(data.Data.BulletPrefab)
+                .AsSingle();
+
+            Container.Bind<Bullets.Data.SO_SimpleBullet>()
+                .FromInstance(data.Data.BulletData)
                 .AsSingle();
         }
     }

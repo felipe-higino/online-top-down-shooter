@@ -19,18 +19,16 @@ namespace OTDS.Weapons.Client
 
         public void Slash()
         {
-            knifeAttack.SingleAttack(knifeData.data, OnStartAttack, OnEndAttack);
+            knifeAttack.SingleAttack(knifeData.Data, OnStartAttack, OnEndAttack);
         }
 
         private void OnStartAttack()
         {
-            Debug.Log("started");
             slashVisual.SetActive(true);
         }
 
         private void OnEndAttack()
         {
-            Debug.Log("ended");
             slashVisual.SetActive(false);
         }
 

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeafdf3f9e60684fa0dae750946e89b, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  maxBullets: 10
-  shootRate: 10
+  data:
+    maxBullets: 10
+    shootRate: 10
+    bulletData: {fileID: 11400000, guid: cd2fa82c07b6b0b419b3d2842436b54c, type: 2}
+    bulletPrefab: {fileID: 8802271797119458666, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ShotgunBullet
   m_EditorClassIdentifier: 
   data:
+    lifetime: 4
     startVelocity: 80
     bulletLifetime: 1

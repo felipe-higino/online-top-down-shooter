@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddeafdf3f9e60684fa0dae750946e89b, type: 3}
   m_Name: Rifle
   m_EditorClassIdentifier: 
-  maxBullets: 10
-  shootRate: 10
+  data:
+    maxBullets: 10
+    shootRate: 10
+    bulletData: {fileID: 11400000, guid: 3b9b0ea6f28460f4b912bab453d73ccd, type: 2}
+    bulletPrefab: {fileID: 8850635847122876084, guid: b8bc6cece1eb28243b7555583ada69e6, type: 3}
