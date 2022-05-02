@@ -5,12 +5,20 @@ using UnityEngine;
 
 namespace OTDS.PlayerState.Showcase
 {
-    public class S_ScenePlayerState : MonoBehaviour
+    //sensible data being trusted to client (client singleton)
+    public class S_ScenePlayerState : MonoBehaviour, Interface.IPlayerState
     {
-        [field: SerializeField] public GameObject PlayerRoot { get; set; }
+
+        //------ IPlayerState
+        [field: SerializeField] public SO_SimpleGun CurrentGun { get; set; }
         [field: SerializeField] public Transform GunSpawnPoint { get; set; }
+        // [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
+
+        //------ Client data
+        // [field: SerializeField] public GameObject BulletPrefab { get; set; }
 
         public static S_ScenePlayerState Instance { get; private set; }
+
 
         private void Awake()
         {

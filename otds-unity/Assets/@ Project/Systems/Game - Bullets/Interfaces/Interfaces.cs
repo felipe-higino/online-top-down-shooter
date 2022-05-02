@@ -6,18 +6,14 @@ namespace OTDS.Bullets.Interfaces
     // ------------  simple Bullet Factory
     public interface ISimpleBulletFactoryServiceParameters
     {
-        GameObject Prefab { get; }
-        Transform Location { get; }
+        GameObject BulletPrefab { get; }
+        Transform BulletSpawnLocation { get; }
         ILifetimeChronometerParams ChronometerParams { get; }
         IAddBulletImpulseServiceParams ImpulseParams { get; }
     }
 
     public interface ISimpleBulletFactoryService
     {
-        // IPrefabInstantiationService prefabInstantiationService { get; }
-        // ILifetimeChronometerService lifetimeChronometerService { get; }
-        // IAddBulletImpulseService addBulletImpulseService { get; }
-        // ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
         void FactoryContextBullet();
     }
 

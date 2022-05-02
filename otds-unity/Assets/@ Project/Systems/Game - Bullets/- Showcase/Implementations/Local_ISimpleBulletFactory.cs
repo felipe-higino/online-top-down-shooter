@@ -7,20 +7,22 @@ using Zenject;
 
 namespace OTDS.Bullets.Showcase
 {
-    // public class Local_A_BulletFactory : A_BulletFactory
-    // public class Local_ISimpleBulletFactoryService : MonoBehaviour, ISimpleBulletFactoryService
+
     public class Local_ISimpleBulletFactory : MonoBehaviour, ISimpleBulletFactoryService
     {
         [Inject] public Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
-        [Inject] public ILifetimeChronometerService lifetimeChronometerService { get; }
-        [Inject] public IAddBulletImpulseService addBulletImpulseService { get; }
-
         [Inject] public ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
 
-        private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
-        private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
-        private GameObject prefab => simpleBulletFactoryParams.Prefab;
-        private Transform location => simpleBulletFactoryParams.Location;
+        // [Inject]
+        // public ILifetimeChronometerService lifetimeChronometerService { get; }
+        // private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
+
+        // [Inject] 
+        // public IAddBulletImpulseService addBulletImpulseService { get; }
+        // private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
+
+        private GameObject prefab => simpleBulletFactoryParams.BulletPrefab;
+        private Transform location => simpleBulletFactoryParams.BulletSpawnLocation;
 
         public void FactoryContextBullet()
         {
@@ -28,16 +30,16 @@ namespace OTDS.Bullets.Showcase
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);
 
             //timer 
-            lifetimeChronometerService.StartTimer(
-                parameters: m_chronometerParams,
-                End: (success) =>
-                {
-                    prefabInstantiationService.TryDestroy(instance);
-                }
-            );
+            // lifetimeChronometerService.StartTimer(
+            //     parameters: m_chronometerParams,
+            //     End: (success) =>
+            //     {
+            //         prefabInstantiationService.TryDestroy(instance);
+            //     }
+            // );
 
             //impulse 
-            addBulletImpulseService.AddBulletImpulse(m_impulseParams);
+            // addBulletImpulseService.AddBulletImpulse(m_impulseParams);
         }
     }
 

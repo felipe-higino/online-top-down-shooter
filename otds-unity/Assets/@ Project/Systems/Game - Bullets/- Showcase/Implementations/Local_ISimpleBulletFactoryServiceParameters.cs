@@ -7,10 +7,8 @@ namespace OTDS.Bullets.Showcase
 {
     public class Local_ISimpleBulletFactoryServiceParameters : MonoBehaviour, Interfaces.ISimpleBulletFactoryServiceParameters
     {
-        [SerializeField] public Data.SO_SimpleBullet currentBullet;
-
-        public GameObject Prefab => null;
-        public Transform Location => null;
+        public GameObject BulletPrefab => null;
+        public Transform BulletSpawnLocation => null;
         public ILifetimeChronometerParams ChronometerParams => null;
         public IAddBulletImpulseServiceParams ImpulseParams => null;
 
