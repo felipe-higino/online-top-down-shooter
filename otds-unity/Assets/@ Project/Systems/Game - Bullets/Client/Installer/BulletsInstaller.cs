@@ -14,10 +14,6 @@ namespace OTDS.Bullets.Client
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Interfaces.IPrefabInstantiationService>()
-                .FromComponentInHierarchy()
-                .AsSingle();
-
             // --------- bullet factory
             Container.Bind<Interfaces.ISimpleBulletFactoryService>()
                 .FromComponentInHierarchy()

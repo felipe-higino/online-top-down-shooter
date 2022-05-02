@@ -1,9 +1,8 @@
 {
-    "name": "OTDS.PlayterState.Client",
+    "name": "OTDS.Utilities.Showcase",
     "rootNamespace": "",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
-        "GUID:554131bdc87451e479e7df9a2249f291"
+        "GUID:90a3b95e544a5cd47bfc5b81552ed01a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

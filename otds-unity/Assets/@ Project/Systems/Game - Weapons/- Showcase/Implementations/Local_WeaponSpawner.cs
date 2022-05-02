@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
+using Zenject;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -9,34 +9,34 @@ using UnityEditor;
 
 namespace OTDS.Weapons.Showcase
 {
-    public class Local_WeaponSpawner : MonoBehaviour
+    public class Local_WeaponSpawner : MonoBehaviour//,Interfaces.IKnifeAttack
     {
-        [SerializeField] private Data.SO_SimpleGunRelations simpleGunDb;
+        [Inject] private PlayerState.Interface.IPlayerState playerState;
+        [Inject] private Data.SO_SimpleGunRelations database;
+        [Inject] private Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService;
 
-        public void RequestSpawn(Data.SO_SimpleGun gunID)
+        public void GivePlayerSimpleGun(Data.SO_SimpleGun simpleGun)
         {
-            var dataToSpawn = simpleGunDb.Find(gunID);
-            if (null == dataToSpawn)
+            var gunToSpawn = database.Find(simpleGun);
+            if (null == gunToSpawn)
             {
-                Debug.LogError($"fail to find {gunID} in schema");
+                Debug.LogError("failed to get gun from db");
                 return;
             }
 
-            var gunPrefab = dataToSpawn.GunPrefab;
-            //TODO: setup context in interfaces
-            Instantiate(gunPrefab, transform);
-        }
-
-        private IEnumerable<string> QueryNames()
-        {
-            return simpleGunDb.Table.List.Select(x =>
-            {
-                Debug.Log("iae");
-                return x.Data.name;
-            });
+            var gunSpawnPoint = playerState.GunSpawnPoint;
+            var instance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
+            instance.transform.SetParent(gunSpawnPoint);
         }
 
 #if UNITY_EDITOR
+        [Header("---- editor only ----")]
+        [SerializeField] Data.SO_SimpleGun gunToSpawn;
+        private void GiveSerializedGun()
+        {
+            GivePlayerSimpleGun(gunToSpawn);
+        }
+
         [CustomEditor(typeof(Local_WeaponSpawner))]
         public class Local_WeaponSpawnerEditor : Editor
         {
@@ -48,22 +48,19 @@ namespace OTDS.Weapons.Showcase
 
             public override void OnInspectorGUI()
             {
+                base.OnInspectorGUI();
+
                 var disable = !Application.isPlaying;
                 using (new EditorGUI.DisabledGroupScope(disable))
                 {
-                    var list = script.simpleGunDb.Table.List.ToList();
-                    foreach (var obj in list)
+                    if (GUILayout.Button(disable ? "Give Serialized Gun (OnlyPlayMode)" : "Give Serialized Gun"))
                     {
-                        if (GUILayout.Button(disable ? $"{obj.Data.name} (OnlyPlayMode)" : $"{obj.Data.name}"))
-                        {
-                            script.RequestSpawn(obj.Data);
-                        }
+                        script.GiveSerializedGun();
                     }
                 }
-                base.OnInspectorGUI();
             }
         }
 #endif
-
     }
+
 }

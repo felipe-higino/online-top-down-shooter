@@ -5,13 +5,13 @@ using OTDS.Bullets.Interfaces;
 using UnityEngine;
 using Zenject;
 
-namespace OTDS.Bullets.Client
+namespace OTDS.Bullets.Showcase
 {
     // public class Local_A_BulletFactory : A_BulletFactory
     // public class Local_ISimpleBulletFactoryService : MonoBehaviour, ISimpleBulletFactoryService
-    public class SimpleBulletFactory : MonoBehaviour, ISimpleBulletFactoryService
+    public class Local_ISimpleBulletFactory : MonoBehaviour, ISimpleBulletFactoryService
     {
-        [Inject] public IPrefabInstantiationService prefabInstantiationService { get; }
+        [Inject] public Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
         [Inject] public ILifetimeChronometerService lifetimeChronometerService { get; }
         [Inject] public IAddBulletImpulseService addBulletImpulseService { get; }
 
@@ -28,16 +28,16 @@ namespace OTDS.Bullets.Client
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);
 
             //timer 
-            // lifetimeChronometerService.StartTimer(
-            //     parameters: m_chronometerParams,
-            //     End: (success) =>
-            //     {
-            //         prefabInstantiationService.Destroy(instance);
-            //     }
-            // );
+            lifetimeChronometerService.StartTimer(
+                parameters: m_chronometerParams,
+                End: (success) =>
+                {
+                    prefabInstantiationService.TryDestroy(instance);
+                }
+            );
 
             //impulse 
-            // addBulletImpulseService.AddBulletImpulse(m_impulseParams);
+            addBulletImpulseService.AddBulletImpulse(m_impulseParams);
         }
     }
 

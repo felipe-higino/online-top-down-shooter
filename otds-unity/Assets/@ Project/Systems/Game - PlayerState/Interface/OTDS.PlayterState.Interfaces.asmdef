@@ -1,3 +1,16 @@
 {
-	"name": "OTDS.PlayterState.Interfaces"
+    "name": "OTDS.PlayterState.Interfaces",
+    "rootNamespace": "",
+    "references": [
+        "GUID:73896ff26bc393942bf9caf08392b0ee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

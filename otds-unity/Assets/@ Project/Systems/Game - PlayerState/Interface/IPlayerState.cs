@@ -6,8 +6,10 @@ namespace OTDS.PlayerState.Interface
 {
     public interface IPlayerState
     {
-        GameObject CurrentGun { get; set; }
-        int CurrentLife { get; set; }
-        int Current { get; set; }
+        Weapons.Data.SO_SimpleGun CurrentGun { get; }
+        GameObject PlayerRoot { get; }
+        Transform GunSpawnPoint { get; }
+        // GameObject CurrentGun { get; set; }
+        // int CurrentLife { get; set; }
     }
 }

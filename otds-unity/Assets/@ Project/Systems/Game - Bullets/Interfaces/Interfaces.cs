@@ -21,13 +21,6 @@ namespace OTDS.Bullets.Interfaces
         void FactoryContextBullet();
     }
 
-    // ------------ prefab instantiation
-    public interface IPrefabInstantiationService
-    {
-        GameObject TryInstantiate(GameObject prefab, Transform location);
-        void TryDestroy(GameObject gameObject);
-    }
-
     // ------------ bullet impulse
     public interface IAddBulletImpulseServiceParams
     {

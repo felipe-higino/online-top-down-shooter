@@ -7,4 +7,9 @@ namespace OTDS.Weapons.Interfaces
     {
         void SingleAttack(Data.KnifeData data, Action Start, Action End);
     }
+
+    // public interface ISimpleGunShoot
+    // {
+    //     void Shoot(Data.SimpleGunData data, Action );
+    // }
 }
