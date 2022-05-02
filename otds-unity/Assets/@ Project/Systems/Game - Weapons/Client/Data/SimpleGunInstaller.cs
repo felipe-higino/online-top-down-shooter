@@ -7,13 +7,13 @@ namespace OTDS.Weapons.Client
 
     public class SimpleGunInstaller : MonoInstaller
     {
-        [SerializeField] private SO_SimpleGun data;
-        [SerializeField] Transform bulletSpawnPoint;
-        [SerializeField] GameObject bulletPrefab;
+        [SerializeField] private Data.SO_SimpleGun data;
+        [SerializeField] private Transform bulletSpawnPoint;
+        [SerializeField] private GameObject bulletPrefab;
 
         public override void InstallBindings()
         {
-            Container.Bind<SO_SimpleGun>()
+            Container.Bind<Data.SO_SimpleGun>()
                 .FromInstance(data)
                 .AsSingle();
 
@@ -25,10 +25,6 @@ namespace OTDS.Weapons.Client
             Container.Bind<GameObject>()
                 .WithId("bullet prefab")
                 .FromInstance(bulletPrefab)
-                .AsSingle();
-
-            Container.Bind<IShootSimpleGun>()
-                .FromComponentInHierarchy()
                 .AsSingle();
         }
     }

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 6010848806307991958}
   - component: {fileID: 6010848806307991956}
   - component: {fileID: 6010848806307991959}
+  - component: {fileID: 3429613026641810418}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -182,3 +183,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6e385fd88a4f5db4ebb8d013c5e1ee7c, type: 2}
   bulletSpawnPoint: {fileID: 6010848806028692959}
+  bulletPrefab: {fileID: 8802271797119458666, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
+--- !u!114 &3429613026641810418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010848806307991945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af81287bf3153a440955b8736d7bd618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IPlayerState : MonoBehaviour
+namespace OTDS.PlayerState.Interface
 {
-    // Start is called before the first frame update
-    void Start()
+    public interface IPlayerState
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject CurrentGun { get; set; }
+        int CurrentLife { get; set; }
+        int Current { get; set; }
     }
 }
