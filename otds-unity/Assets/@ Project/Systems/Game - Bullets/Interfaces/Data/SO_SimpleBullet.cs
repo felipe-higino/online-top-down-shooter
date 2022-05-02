@@ -19,13 +19,11 @@ namespace OTDS.Bullets.Data
     }
 
     [CreateAssetMenu(fileName = "SO_SimpleBullet", menuName = "ScriptableObject/Bullets/SO_SimpleBullet", order = 0)]
-    public class SO_SimpleBullet : ScriptableObject, Interfaces.ILifetimeChronometerParams
+    public class SO_SimpleBullet : ScriptableObject
     {
         [SerializeField]
         private BulletData data;
         public BulletData Data => data;
-
-        public float Time => data.SecondsLifetime;
     }
 
 }

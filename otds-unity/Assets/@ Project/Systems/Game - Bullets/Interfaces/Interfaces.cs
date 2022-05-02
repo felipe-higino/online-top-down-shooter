@@ -3,17 +3,44 @@ using UnityEngine;
 
 namespace OTDS.Bullets.Interfaces
 {
-    public interface IPrefabInstantiation
+    // ------------  simple Bullet Factory
+    public interface ISimpleBulletFactoryServiceParameters
     {
-        GameObject Instantiate(GameObject prefab, Transform position);
-        void Destroy(GameObject gameObject);
+        GameObject Prefab { get; }
+        Transform Location { get; }
+        ILifetimeChronometerParams ChronometerParams { get; }
+        IAddBulletImpulseServiceParams ImpulseParams { get; }
+    }
+
+    public interface ISimpleBulletFactoryService
+    {
+        // IPrefabInstantiationService prefabInstantiationService { get; }
+        // ILifetimeChronometerService lifetimeChronometerService { get; }
+        // IAddBulletImpulseService addBulletImpulseService { get; }
+        // ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
+        void FactoryContextBullet();
+    }
+
+    // ------------ prefab instantiation
+    public interface IPrefabInstantiationService
+    {
+        GameObject TryInstantiate(GameObject prefab, Transform location);
+        void TryDestroy(GameObject gameObject);
+    }
+
+    // ------------ bullet impulse
+    public interface IAddBulletImpulseServiceParams
+    {
+        float ForceScale { get; }
+        Rigidbody2D Rigidbody { get; }
     }
 
     public interface IAddBulletImpulseService
     {
-        void AddBulletImpulse(float forceScale, Rigidbody2D rigidbody);
+        void AddBulletImpulse(IAddBulletImpulseServiceParams parameters);
     }
 
+    // ------------ lifetime chronometer
     public interface ILifetimeChronometerParams
     {
         float Time { get; }

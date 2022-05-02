@@ -20,11 +20,6 @@ namespace OTDS.Weapons.Client
                 .FromInstance(bulletSpawnPoint)
                 .AsSingle();
 
-            Container.Bind<GameObject>()
-                .WithId("bullet prefab")
-                .FromInstance(data.Data.BulletPrefab)
-                .AsSingle();
-
             Container.Bind<Bullets.Data.SO_SimpleBullet>()
                 .FromInstance(data.Data.BulletData)
                 .AsSingle();

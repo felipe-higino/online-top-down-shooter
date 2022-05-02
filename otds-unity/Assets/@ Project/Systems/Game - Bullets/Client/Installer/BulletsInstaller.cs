@@ -10,11 +10,20 @@ namespace OTDS.Bullets.Client
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Interfaces.A_BulletFactory>()
+            Container.Bind<Interfaces.IAddBulletImpulseService>()
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Interfaces.IAddBulletImpulseService>()
+            Container.Bind<Interfaces.IPrefabInstantiationService>()
+                .FromComponentInHierarchy()
+                .AsSingle();
+
+            // --------- bullet factory
+            Container.Bind<Interfaces.ISimpleBulletFactoryService>()
+                .FromComponentInHierarchy()
+                .AsSingle();
+
+            Container.Bind<Interfaces.ISimpleBulletFactoryServiceParameters>()
                 .FromComponentInHierarchy()
                 .AsSingle();
         }

@@ -13,16 +13,18 @@ namespace OTDS.Weapons.Client
     {
         [Inject] private Data.SO_SimpleGun data;
         [Inject(Id = "bullet spawn point")] private Transform bulletSpawnPoint;
-        [Inject(Id = "bullet prefab")] private GameObject bulletPrefab;
+        // [Inject(Id = "bullet prefab")] private GameObject bulletPrefab;
 
-        [Inject] private Bullets.Interfaces.A_BulletFactory bulletFactory;
+        // [Inject] private Bullets.Interfaces.A_BulletFactory bulletFactory;
+        [Inject] private Bullets.Interfaces.ISimpleBulletFactoryService simpleBulletFactory;
         [Inject] Bullets.Data.SO_SimpleBullet bulletData;
 
         private void TrySpawn()
         {
+            simpleBulletFactory.FactoryContextBullet();
             //TODO: gameloop setup factory
-            bulletFactory.SetupBulletFactory(bulletPrefab, bulletSpawnPoint, bulletData.Data);
-            bulletFactory.SpawnBullet();
+            // bulletFactory.SetupBulletFactory(bulletPrefab, bulletSpawnPoint, bulletData.Data);
+            // bulletFactory.SpawnBullet();
         }
 
 #if UNITY_EDITOR
