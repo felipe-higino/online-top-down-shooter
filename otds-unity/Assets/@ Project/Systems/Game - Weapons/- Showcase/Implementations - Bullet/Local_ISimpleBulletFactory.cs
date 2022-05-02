@@ -37,11 +37,6 @@ namespace OTDS.Bullets.Showcase
                     prefabInstantiationService.TryDestroy(instance);
                 }
             );
-
-            //impulse
-            var rb = instance.GetComponent<Rigidbody2D>();
-            m_impulseParams.Rigidbody = rb;
-            addBulletImpulseService.AddBulletImpulse(m_impulseParams);
         }
     }
 

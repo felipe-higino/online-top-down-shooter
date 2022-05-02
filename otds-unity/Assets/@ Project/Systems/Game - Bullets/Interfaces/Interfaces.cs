@@ -17,13 +17,15 @@ namespace OTDS.Bullets.Interfaces
         void FactoryContextBullet();
     }
 
-    // ------------ bullet impulse
+    // ------------ bullet impulse 
+    //TODO: remove
     public interface IAddBulletImpulseServiceParams
     {
         float ForceScale { get; }
         Rigidbody2D Rigidbody { get; set; }
     }
 
+    //TODO: remove
     public interface IAddBulletImpulseService
     {
         void AddBulletImpulse(IAddBulletImpulseServiceParams parameters);

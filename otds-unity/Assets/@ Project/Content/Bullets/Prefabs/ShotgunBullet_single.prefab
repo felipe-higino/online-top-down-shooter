@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 931331122472821177}
   - component: {fileID: 931331122472821179}
   - component: {fileID: 931331122472821176}
+  - component: {fileID: 5015211949878621813}
   m_Layer: 0
   m_Name: ShotgunBullet_single
   m_TagString: Untagged
@@ -81,6 +82,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9464101, y: 0.7953808}
   m_EdgeRadius: 0
+--- !u!114 &5015211949878621813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931331122472821158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9818a35c0faa88c4a94b24723b5a1c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletData: {fileID: 11400000, guid: cd2fa82c07b6b0b419b3d2842436b54c, type: 2}
+  rigidBody: {fileID: 931331122472821179}
 --- !u!1 &6045817466686084299
 GameObject:
   m_ObjectHideFlags: 0

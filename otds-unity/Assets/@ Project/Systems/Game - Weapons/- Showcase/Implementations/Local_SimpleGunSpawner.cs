@@ -51,6 +51,7 @@ namespace OTDS.Weapons.Showcase
             public float Time { set; get; }
         }
 
+        //TODO: remove
         private class ImpulseParams : Bullets.Interfaces.IAddBulletImpulseServiceParams
         {
             public float ForceScale { get; set; }
