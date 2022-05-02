@@ -9,15 +9,15 @@ using UnityEditor;
 
 namespace OTDS.Weapons.Showcase
 {
-    public class Local_WeaponSpawner : MonoBehaviour//,Interfaces.IKnifeAttack
+    public class Local_SimpleGunSpawner : MonoBehaviour, Interfaces.ISimpleGunSpawner
     {
         [Inject] private PlayerState.Interface.IPlayerState playerState;
-        [Inject] private Data.SO_SimpleGunRelations database;
+        [Inject] private Interfaces.ISimpleGunsDatabaseGetter databaseGetter;
         [Inject] private Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService;
 
         public void GivePlayerSimpleGun(Data.SO_SimpleGun simpleGun)
         {
-            var gunToSpawn = database.Find(simpleGun);
+            var gunToSpawn = databaseGetter.database.Find(simpleGun);
             if (null == gunToSpawn)
             {
                 Debug.LogError("failed to get gun from db");
@@ -37,13 +37,13 @@ namespace OTDS.Weapons.Showcase
             GivePlayerSimpleGun(gunToSpawn);
         }
 
-        [CustomEditor(typeof(Local_WeaponSpawner))]
+        [CustomEditor(typeof(Local_SimpleGunSpawner))]
         public class Local_WeaponSpawnerEditor : Editor
         {
-            Local_WeaponSpawner script;
+            Local_SimpleGunSpawner script;
             private void OnEnable()
             {
-                script = (Local_WeaponSpawner)target;
+                script = (Local_SimpleGunSpawner)target;
             }
 
             public override void OnInspectorGUI()

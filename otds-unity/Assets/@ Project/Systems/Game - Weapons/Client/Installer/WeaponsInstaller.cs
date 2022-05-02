@@ -1,13 +1,11 @@
 using UnityEngine;
 using Zenject;
-using OTDS.Weapons.Interfaces;
 
 namespace OTDS.Weapons.Client
 {
 
     public class WeaponsInstaller : MonoInstaller
     {
-        [SerializeField] private Data.SO_SimpleGunRelations gunsDatabase;
 
         public override void InstallBindings()
         {
@@ -15,8 +13,12 @@ namespace OTDS.Weapons.Client
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Data.SO_SimpleGunRelations>()
-                .FromInstance(gunsDatabase)
+            Container.Bind<Interfaces.ISimpleGunSpawner>()
+                .FromComponentInHierarchy()
+                .AsSingle();
+
+            Container.Bind<Interfaces.ISimpleGunsDatabaseGetter>()
+                .FromComponentInHierarchy()
                 .AsSingle();
         }
     }

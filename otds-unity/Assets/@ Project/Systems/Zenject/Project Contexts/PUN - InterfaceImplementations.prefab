@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6641422996504903460}
-  - component: {fileID: 9172084522950657441}
+  - component: {fileID: 6498011125763096090}
   m_Layer: 0
   m_Name: <I> Utilities
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 612146087949458950}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9172084522950657441
+--- !u!114 &6498011125763096090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 164072800140616986}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 988c58566d85dbc4a89df34190d27070, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbaeca85ef96434e8d08271d7b79ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2693929202163250449
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7337016383927562033}
   - component: {fileID: 3606602390529634961}
-  - component: {fileID: 6531179880270099430}
+  - component: {fileID: 2627233708461014067}
   m_Layer: 0
   m_Name: <I> Weapons
   m_TagString: Untagged
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f701e8cae361f46a1da973fd399488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6531179880270099430
+--- !u!114 &2627233708461014067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2b97f699b1ac5489847b5ea80e5924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <database>k__BackingField: {fileID: 11400000, guid: 212da1029b507ec4cb70bbe45ea277bc, type: 2}
+  <database>k__BackingField: {fileID: 11400000, guid: 8caa60eb6a7ebb6498a0938cce4df4fa, type: 2}
 --- !u!1 &5758121944539893671
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 612146087949458950}
   m_Layer: 0
-  m_Name: Local - InterfaceImplementations
+  m_Name: PUN - InterfaceImplementations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
