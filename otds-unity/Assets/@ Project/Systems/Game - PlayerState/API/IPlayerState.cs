@@ -9,8 +9,12 @@ namespace OTDS.PlayerState.Interfaces
     /// </summary>
     public interface IPlayerState
     {
+        //server
         Weapons.Data.SO_SimpleGun CurrentGun { get; }
         Transform GunSpawnPoint { get; }
         Transform PlayerLocation { get; }
+
+        //client
+        GameObject CurrentGunInstance { get; set; }
     }
 }

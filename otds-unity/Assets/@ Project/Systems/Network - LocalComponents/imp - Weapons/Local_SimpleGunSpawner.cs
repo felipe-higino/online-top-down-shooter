@@ -24,22 +24,35 @@ namespace OTDS.Weapons.Showcase
                 return;
             }
 
+            //destroy old gun instance
+            {
+                var currentGunInstance = OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGunInstance;
+                if (null != currentGunInstance)
+                    prefabInstantiationService.TryDestroy(currentGunInstance);
+            }
+
             var gunSpawnPoint = playerState.GunSpawnPoint;
-            var bulletInstance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
-            var bulletTransform = bulletInstance?.transform;
-            bulletTransform?.SetParent(gunSpawnPoint);
+            var gunInstance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
+            var gunTransform = gunInstance?.transform;
+            gunTransform?.SetParent(gunSpawnPoint);
 
-            //setup GunState 
             var bulletPrefab = gunToSpawn.BulletPrefab;
-            var bulletSpawnPoint = bulletTransform?.Find("<p> BulletSpawnPoint");
+            var bulletSpawnPoint = gunTransform?.Find("<p> BulletSpawnPoint");
 
-            //referencing for client
+            //setup player state
+            {
+                OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGun = simpleGun;
+                OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGunInstance = gunInstance;
+            }
 
-            OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGun = simpleGun;
+            //setup bullet factory 
+            {
+                S_BulletFactoryParameters.Instance.BulletPrefab = bulletPrefab;
+                S_BulletFactoryParameters.Instance.BulletSpawnLocation = bulletSpawnPoint;
+            }
 
-            S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;
-            S_GunPlayerState.Instance.BulletSpawnLocation = bulletSpawnPoint;
         }
+
 
 #if UNITY_EDITOR
         [Header("---- editor only ----")]
