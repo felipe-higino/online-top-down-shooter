@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6641422996504903460}
   - component: {fileID: 6498011125763096090}
+  - component: {fileID: 2123744059468684186}
   m_Layer: 0
   m_Name: <I> Utilities
   m_TagString: Untagged
@@ -44,6 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbaeca85ef96434e8d08271d7b79ad3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2123744059468684186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164072800140616986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349b3f78dc244d544834f459c3f24046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2693929202163250449
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +68,6 @@ GameObject:
   - component: {fileID: 7834306733937114230}
   - component: {fileID: 6546382894427061618}
   - component: {fileID: 7915825049259825499}
-  - component: {fileID: 5685556673421299824}
   m_Layer: 0
   m_Name: <I> Bullets
   m_TagString: Untagged
@@ -102,18 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6932cdf9a74b0d441a3f65a6826ddc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5685556673421299824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2693929202163250449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 349b3f78dc244d544834f459c3f24046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2954204276748321128
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb9aec3cf4680947b8b384c57bf7223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBullet: {fileID: 11400000, guid: 40323c9a8c8f16a40bc22f04fd55a691, type: 2}
 --- !u!1 &3940664911382036048
 GameObject:
   m_ObjectHideFlags: 0

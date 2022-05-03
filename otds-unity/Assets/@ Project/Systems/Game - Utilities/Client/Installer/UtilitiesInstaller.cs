@@ -10,6 +10,11 @@ namespace OTDS.Utilities.Client
             Container.Bind<Interfaces.IPrefabInstantiationService>()
                 .FromComponentInHierarchy()
                 .AsSingle();
+
+
+            Container.Bind<Interfaces.IAddForceService>()
+                .FromComponentInHierarchy()
+                .AsSingle();
         }
     }
 }

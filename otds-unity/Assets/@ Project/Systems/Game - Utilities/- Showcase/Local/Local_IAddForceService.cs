@@ -1,20 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using OTDS.Bullets.Interfaces;
+using OTDS.Utilities.Interfaces;
 using UnityEngine;
 
-namespace OTDS.Bullets.Showcase
+namespace OTDS.Utilities.Showcase
 {
-
     public class Local_IAddForceService : MonoBehaviour, Interfaces.IAddForceService
     {
         public void AddForce(IAddForceServiceParams parameters)
         {
-            AddForce(parameters.ForceScale, parameters.Rigidbody);
-        }
-
-        private void AddForce(float forceScale, Rigidbody2D rigidbody)
-        {
+            var forceScale = parameters.ForceScale;
+            var rigidbody = parameters.Rigidbody;
             rigidbody.AddForce(rigidbody.transform.right * forceScale);
         }
     }

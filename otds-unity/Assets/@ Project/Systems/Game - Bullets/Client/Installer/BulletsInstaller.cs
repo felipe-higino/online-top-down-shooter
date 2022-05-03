@@ -10,10 +10,6 @@ namespace OTDS.Bullets.Client
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Interfaces.IAddForceService>()
-                .FromComponentInHierarchy()
-                .AsSingle();
-
             // --------- bullet factory
             Container.Bind<Interfaces.ISimpleBulletFactoryService>()
                 .FromComponentInHierarchy()

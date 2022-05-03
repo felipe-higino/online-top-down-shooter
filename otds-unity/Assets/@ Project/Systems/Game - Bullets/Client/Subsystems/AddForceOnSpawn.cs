@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using OTDS.Bullets.Interfaces;
 using UnityEngine;
 using Zenject;
 
@@ -12,7 +11,7 @@ namespace OTDS.Bullets.Client
     /// </summary>
     public class AddForceOnSpawn : MonoBehaviour
     {
-        [Inject] Interfaces.IAddForceService addForceService;
+        [Inject] Utilities.Interfaces.IAddForceService addForceService;
         [SerializeField] Bullets.Data.SO_SimpleBullet bulletData;
         [SerializeField] private Rigidbody2D rigidBody;
 
@@ -26,7 +25,7 @@ namespace OTDS.Bullets.Client
             addForceService.AddForce(parameters);
         }
 
-        private class Parameters : IAddForceServiceParams
+        private class Parameters : Utilities.Interfaces.IAddForceServiceParams
         {
             public float ForceScale { get; set; }
             public Rigidbody2D Rigidbody { get; set; }

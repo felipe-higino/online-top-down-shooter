@@ -10,27 +10,11 @@ namespace OTDS.Bullets.Interfaces
         Transform BulletSpawnLocation { get; }
         //TODO: remove
         ILifetimeChronometerParams ChronometerParams { get; }
-        //TODO: remove
-        IAddForceServiceParams ImpulseParams { get; }
     }
 
     public interface ISimpleBulletFactoryService
     {
         void FactoryContextBullet();
-    }
-
-    // ------------ add force 
-    //TODO: remove
-    public interface IAddForceServiceParams
-    {
-        float ForceScale { get; }
-        Rigidbody2D Rigidbody { get; set; }
-    }
-
-    //TODO: remove
-    public interface IAddForceService
-    {
-        void AddForce(IAddForceServiceParams parameters);
     }
 
     // ------------ lifetime chronometer
