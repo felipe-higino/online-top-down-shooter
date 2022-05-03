@@ -1,9 +1,8 @@
 {
-    "name": "OTDS.Weapons.Interfaces",
+    "name": "OTDS.PlayterState.API",
     "rootNamespace": "",
     "references": [
-        "GUID:48e3b06ee1a38b540aad24784d65a977",
-        "GUID:90a3b95e544a5cd47bfc5b81552ed01a"
+        "GUID:73896ff26bc393942bf9caf08392b0ee"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
