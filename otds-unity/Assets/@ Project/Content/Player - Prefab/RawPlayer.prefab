@@ -368,6 +368,10 @@ GameObject:
   m_Component:
   - component: {fileID: 388979068474171486}
   - component: {fileID: 6594689209089637063}
+  - component: {fileID: 3297751348264396429}
+  - component: {fileID: 2970842151167211273}
+  - component: {fileID: 5264414267431547588}
+  - component: {fileID: 8861757801095302751}
   m_Layer: 0
   m_Name: RawPlayer
   m_TagString: Untagged
@@ -407,6 +411,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 388979067465199956}
   mainCamera: {fileID: 388979068378799847}
+--- !u!114 &3297751348264396429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388979068474171481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8165bf4b317c43a7677606185a2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2970842151167211273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388979068474171481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95523544f46516640a423a3444fbaa7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5264414267431547588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388979068474171481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b385067c4061534283f3505534860a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 6
+--- !u!114 &8861757801095302751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388979068474171481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5496fcde79b6f704fa7b58ae64dd4641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &388979068792925793
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +522,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6078838, y: 1}
+    m_SensorSize: {x: 1.7842324, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
