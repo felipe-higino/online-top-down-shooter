@@ -31,21 +31,11 @@ namespace OTDS.Weapons.Showcase
             //setup GunState 
             var bulletPrefab = gunToSpawn.BulletPrefab;
             var bulletSpawnPoint = instance.transform.Find("<p> BulletSpawnPoint");
-            var chronometerParams = new ChronometerParams
-            {
-                Time = gunToSpawn.Data.Data.BulletData.Data.SecondsLifetime
-            };
 
             OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGun = simpleGun;
 
             S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;
             S_GunPlayerState.Instance.BulletSpawnLocation = bulletSpawnPoint;
-            S_GunPlayerState.Instance.ChronometerParams = chronometerParams;
-        }
-        //TODO: REMOVE
-        private class ChronometerParams : Bullets.Interfaces.ILifetimeChronometerParams
-        {
-            public float Time { set; get; }
         }
 
 #if UNITY_EDITOR

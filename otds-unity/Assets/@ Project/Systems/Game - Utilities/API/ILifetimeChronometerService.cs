@@ -1,7 +1,6 @@
 using System;
-using UnityEngine;
 
-namespace OTDS.Bullets.Interfaces
+namespace OTDS.Utilities.Interfaces
 {
     public interface ILifetimeChronometerService
     {

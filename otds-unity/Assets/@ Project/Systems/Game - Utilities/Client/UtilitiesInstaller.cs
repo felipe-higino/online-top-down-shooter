@@ -7,10 +7,13 @@ namespace OTDS.Utilities.Client
     {
         public override void InstallBindings()
         {
-            Container.Bind<Interfaces.IPrefabInstantiationService>()
+            Container.Bind<Interfaces.ILifetimeChronometerService>()
                 .FromComponentInHierarchy()
                 .AsSingle();
 
+            Container.Bind<Interfaces.IPrefabInstantiationService>()
+                .FromComponentInHierarchy()
+                .AsSingle();
 
             Container.Bind<Interfaces.IAddForceService>()
                 .FromComponentInHierarchy()

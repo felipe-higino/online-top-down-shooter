@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using OTDS.Bullets.Interfaces;
+using OTDS.Utilities.Interfaces;
 using UnityEngine;
 
 #if UNITY_EDITOR
@@ -11,7 +11,7 @@ using UnityEditor;
 namespace OTDS.Bullets.Showcase
 {
 
-    public class Local_ILifetimeChronometerService : MonoBehaviour, Interfaces.ILifetimeChronometerService
+    public class Local_ILifetimeChronometerService : MonoBehaviour, ILifetimeChronometerService
     {
         public void StartTimer(ILifetimeChronometerParams parameters, Action Start = null, EndCallback End = null)
         {

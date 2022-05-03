@@ -12,8 +12,6 @@ namespace OTDS.Bullets.Interfaces
     {
         GameObject BulletPrefab { get; }
         Transform BulletSpawnLocation { get; }
-        //TODO: remove
-        ILifetimeChronometerParams ChronometerParams { get; }
     }
 
 }
