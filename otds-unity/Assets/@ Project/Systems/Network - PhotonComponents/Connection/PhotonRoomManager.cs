@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Photon.Pun;
 using Photon.Realtime;
 
@@ -12,6 +13,8 @@ namespace OTDS.Network.PhotonComponents
 {
     public class PhotonRoomManager : MonoBehaviourPunCallbacks
     {
+        [SerializeField] private UnityEvent OnJoinedRoomEvent;
+
         public bool autoJoinRoomOnConnect = false;
 
         public void JoinDefaultRoom()
@@ -36,6 +39,7 @@ namespace OTDS.Network.PhotonComponents
         public override void OnJoinedRoom()
         {
             base.OnJoinedRoom();
+            OnJoinedRoomEvent.Invoke();
         }
 
 #if UNITY_EDITOR

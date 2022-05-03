@@ -7,6 +7,8 @@ namespace OTDS.Network.PhotonComponents
 {
     public class RPC_SpawnObjectOnMasterClient : MonoBehaviour
     {
+        public const string rpcName = nameof(SpawnObjectOnMasterClient);
+
         [PunRPC]
         private void SpawnObjectOnMasterClient(string prefabName)
         {

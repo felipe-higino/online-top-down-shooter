@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 8850635847122876072, guid: b8bc6cece1eb28243b7555583ada69e6, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 534906725303549462}
+      objectReference: {fileID: 0}
     - target: {fileID: 8850635847122876072, guid: b8bc6cece1eb28243b7555583ada69e6, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -133,15 +133,3 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &534906725303549462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3092293459765513133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b6392e3a496a94bb69ff86ce686879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

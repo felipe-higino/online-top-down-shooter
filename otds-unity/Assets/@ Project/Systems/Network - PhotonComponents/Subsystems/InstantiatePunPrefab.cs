@@ -15,8 +15,7 @@ namespace OTDS.Network.PhotonComponents
 
         public void SpawnPrefab()
         {
-            photonView.RPC("SpawnObjectOnMasterClient", RpcTarget.MasterClient, prefab.name);
-            // PhotonNetwork.InstantiateRoomObject(prefab.name, transform.position, transform.rotation);
+            photonView.RPC(RPC_SpawnObjectOnMasterClient.rpcName, RpcTarget.MasterClient, prefab.name);
         }
 
 #if UNITY_EDITOR

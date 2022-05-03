@@ -7,7 +7,9 @@ namespace OTDS.PlayerState.Showcase
 {
     public class Local_IPlayerState : MonoBehaviour, Interfaces.IPlayerState
     {
+        public Transform PlayerLocation => S_ScenePlayerState.Instance.PlayerLocation;
         public SO_SimpleGun CurrentGun => S_ScenePlayerState.Instance.CurrentGun;
         public Transform GunSpawnPoint => S_ScenePlayerState.Instance.GunSpawnPoint;
+
     }
 }

@@ -11,5 +11,6 @@ namespace OTDS.PlayerState.Interfaces
     {
         Weapons.Data.SO_SimpleGun CurrentGun { get; }
         Transform GunSpawnPoint { get; }
+        Transform PlayerLocation { get; }
     }
 }

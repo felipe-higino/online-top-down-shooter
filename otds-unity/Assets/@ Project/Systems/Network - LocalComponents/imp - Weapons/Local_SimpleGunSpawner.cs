@@ -25,12 +25,13 @@ namespace OTDS.Weapons.Showcase
             }
 
             var gunSpawnPoint = playerState.GunSpawnPoint;
-            var instance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
-            instance.transform.SetParent(gunSpawnPoint);
+            var bulletInstance = prefabInstantiationService.TryInstantiate(gunToSpawn.GunPrefab, gunSpawnPoint);
+            var bulletTransform = bulletInstance?.transform;
+            bulletTransform?.SetParent(gunSpawnPoint);
 
             //setup GunState 
             var bulletPrefab = gunToSpawn.BulletPrefab;
-            var bulletSpawnPoint = instance.transform.Find("<p> BulletSpawnPoint");
+            var bulletSpawnPoint = bulletTransform?.Find("<p> BulletSpawnPoint");
 
             //referencing for client
 

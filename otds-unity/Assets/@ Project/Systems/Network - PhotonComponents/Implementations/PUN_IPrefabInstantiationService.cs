@@ -26,6 +26,10 @@ namespace OTDS.Network.PhotonComponents.Implementations
 
         public GameObject TryInstantiate(GameObject prefab, Transform location)
         {
+            if (null == prefab)
+                return null;
+            if (null == location)
+                return null;
             return PhotonNetwork.Instantiate(prefab.name, location.position, location.rotation);
         }
     }

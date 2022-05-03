@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Libs.BoilerplateWrappers;
+using Zenject;
 
 namespace OTDS.Network.PhotonComponents
 {
@@ -12,12 +13,14 @@ namespace OTDS.Network.PhotonComponents
         [SerializeField] private Transform slaveTransform;
         [SerializeField] private Transform masterTransform;
 
+        [Inject] private OTDS.PlayerState.Interfaces.IPlayerState playerState;
+
         private void Start()
         {
             if (photonView.IsMine)
             {
                 //TODO: inject this
-                masterTransform = GameObject.Find("<p> playerTransform").transform;
+                masterTransform = playerState.PlayerLocation;
             }
         }
 

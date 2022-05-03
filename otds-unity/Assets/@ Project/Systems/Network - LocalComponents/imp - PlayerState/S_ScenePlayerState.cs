@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using OTDS.PlayerState.Interfaces;
 using OTDS.Weapons.Data;
 using UnityEngine;
 
@@ -9,13 +10,9 @@ namespace OTDS.PlayerState.Showcase
     public class S_ScenePlayerState : MonoBehaviour, Interfaces.IPlayerState
     {
 
-        //------ IPlayerState
         [field: SerializeField] public SO_SimpleGun CurrentGun { get; set; }
         [field: SerializeField] public Transform GunSpawnPoint { get; set; }
-        // [field: SerializeField] public Transform BulletSpawnPoint { get; set; }
-
-        //------ Client data
-        // [field: SerializeField] public GameObject BulletPrefab { get; set; }
+        [field: SerializeField] public Transform PlayerLocation { get; set; }
 
         public static S_ScenePlayerState Instance { get; private set; }
         private void Awake()

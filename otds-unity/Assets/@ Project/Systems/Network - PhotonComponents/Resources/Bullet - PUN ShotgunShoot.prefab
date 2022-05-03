@@ -18,7 +18,7 @@ PrefabInstance:
     - target: {fileID: 2678583897353013669, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4922982880192169141}
+      objectReference: {fileID: 0}
     - target: {fileID: 2678583897353013669, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -54,7 +54,7 @@ PrefabInstance:
     - target: {fileID: 6715208096102121536, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4922982880192169141}
+      objectReference: {fileID: 0}
     - target: {fileID: 6715208096102121536, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 8559991766994410427, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4922982880192169141}
+      objectReference: {fileID: 0}
     - target: {fileID: 8559991766994410427, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 8559991767810743322, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4922982880192169141}
+      objectReference: {fileID: 0}
     - target: {fileID: 8559991767810743322, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
       propertyPath: OnTimeout.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -229,18 +229,6 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4922982880192169141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7215598230487161718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b6392e3a496a94bb69ff86ce686879, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &7215598230487161719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8802271797119458667, guid: c7ec3e5954f5abd4e942e0c64d5ed279, type: 3}
