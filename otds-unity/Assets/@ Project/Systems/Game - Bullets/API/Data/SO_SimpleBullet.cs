@@ -25,5 +25,4 @@ namespace OTDS.Bullets.Data
         private BulletData data;
         public BulletData Data => data;
     }
-
 }

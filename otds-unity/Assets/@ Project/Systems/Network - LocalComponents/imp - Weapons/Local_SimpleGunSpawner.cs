@@ -32,6 +32,8 @@ namespace OTDS.Weapons.Showcase
             var bulletPrefab = gunToSpawn.BulletPrefab;
             var bulletSpawnPoint = instance.transform.Find("<p> BulletSpawnPoint");
 
+            //referencing for client
+
             OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGun = simpleGun;
 
             S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;

@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6484096e6522b44ca37261fcbbec0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BulletPrefab>k__BackingField: {fileID: 8850635847122876084, guid: b8bc6cece1eb28243b7555583ada69e6, type: 3}
+  <BulletPrefab>k__BackingField: {fileID: 0}
   <BulletSpawnLocation>k__BackingField: {fileID: 495572211}
 --- !u!1 &1946892164
 GameObject:

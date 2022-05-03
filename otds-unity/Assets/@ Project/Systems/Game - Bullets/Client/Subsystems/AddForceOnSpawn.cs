@@ -12,7 +12,8 @@ namespace OTDS.Bullets.Client
     public class AddForceOnSpawn : MonoBehaviour
     {
         [Inject] Utilities.Interfaces.IAddForceService addForceService;
-        [SerializeField] Bullets.Data.SO_SimpleBullet bulletData;
+        [Inject] Bullets.Data.SO_SimpleBullet bulletData;
+
         [SerializeField] private Rigidbody2D rigidBody;
 
         void Start()

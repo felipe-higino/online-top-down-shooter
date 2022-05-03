@@ -10,16 +10,8 @@ namespace OTDS.Bullets.Showcase
 
     public class Local_ISimpleBulletFactory : MonoBehaviour, ISimpleBulletFactoryService
     {
-        [Inject] public Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
-        [Inject] public ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
-
-        // [Inject]
-        // public ILifetimeChronometerService lifetimeChronometerService { get; }
-        // private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
-
-        // [Inject]
-        // public IAddBulletImpulseService addBulletImpulseService { get; }
-        // private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
+        [Inject] private Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
+        [Inject] private ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
 
         private GameObject prefab => simpleBulletFactoryParams.BulletPrefab;
         private Transform location => simpleBulletFactoryParams.BulletSpawnLocation;
@@ -28,15 +20,6 @@ namespace OTDS.Bullets.Showcase
         {
             //instantiation
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);
-
-            //timer 
-            // lifetimeChronometerService.StartTimer(
-            //     parameters: m_chronometerParams,
-            //     End: (success) =>
-            //     {
-            //         prefabInstantiationService.TryDestroy(instance);
-            //     }
-            // );
         }
     }
 
