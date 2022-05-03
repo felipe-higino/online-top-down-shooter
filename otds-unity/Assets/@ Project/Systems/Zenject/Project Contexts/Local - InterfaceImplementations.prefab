@@ -269,9 +269,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4019947847111923090}
+  - component: {fileID: 8337596337460567197}
   - component: {fileID: 1420913723751961949}
   - component: {fileID: 4564711208590729616}
-  - component: {fileID: 1946690031405157144}
   m_Layer: 0
   m_Name: <I> CharacterInputs
   m_TagString: Untagged
@@ -294,6 +294,18 @@ Transform:
   m_Father: {fileID: 612146087949458950}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8337596337460567197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147829980394308949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a8165bf4b317c43a7677606185a2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1420913723751961949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,20 +331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 6
---- !u!114 &1946690031405157144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6147829980394308949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d686939df06ee94da9567c4d02c30d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  spawnInterval: 1
 --- !u!1 &7736034165631115788
 GameObject:
   m_ObjectHideFlags: 0

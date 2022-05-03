@@ -13,9 +13,9 @@ namespace OTDS.Bullets.Showcase
         [Inject] public Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService { get; }
         [Inject] public ISimpleBulletFactoryServiceParameters simpleBulletFactoryParams { get; }
 
-        [Inject]
-        public ILifetimeChronometerService lifetimeChronometerService { get; }
-        private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
+        // [Inject]
+        // public ILifetimeChronometerService lifetimeChronometerService { get; }
+        // private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
 
         // [Inject]
         // public IAddBulletImpulseService addBulletImpulseService { get; }
@@ -30,13 +30,13 @@ namespace OTDS.Bullets.Showcase
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);
 
             //timer 
-            lifetimeChronometerService.StartTimer(
-                parameters: m_chronometerParams,
-                End: (success) =>
-                {
-                    prefabInstantiationService.TryDestroy(instance);
-                }
-            );
+            // lifetimeChronometerService.StartTimer(
+            //     parameters: m_chronometerParams,
+            //     End: (success) =>
+            //     {
+            //         prefabInstantiationService.TryDestroy(instance);
+            //     }
+            // );
         }
     }
 

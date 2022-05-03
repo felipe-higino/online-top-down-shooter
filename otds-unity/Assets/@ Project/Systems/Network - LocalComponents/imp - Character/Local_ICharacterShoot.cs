@@ -11,9 +11,10 @@ namespace OTDS.Character.Showcase
         [Inject] private OTDS.Bullets.Interfaces.ISimpleBulletFactoryService simpleBulletFactory;
         [Inject] private OTDS.PlayerState.Interfaces.IPlayerState playerState;
 
-        // private float spawnInterval => playerState.CurrentGun.
+        private float spawnInterval => playerState.CurrentGun.Data.ShootRate;
 
         private bool isOpen = false;
+
         public void CloseFire()
         {
             isOpen = false;
@@ -26,14 +27,14 @@ namespace OTDS.Character.Showcase
             StartCoroutine("SpawnLoop");
         }
 
-        // private IEnumerator SpawnLoop()
-        // {
-        //     while (isOpen)
-        //     {
-        //         NewBullet();
-        //         yield return new WaitForSeconds(spawnInterval);
-        //     }
-        // }
+        private IEnumerator SpawnLoop()
+        {
+            while (isOpen)
+            {
+                NewBullet();
+                yield return new WaitForSeconds(2);
+            }
+        }
 
         private void NewBullet()
         {
