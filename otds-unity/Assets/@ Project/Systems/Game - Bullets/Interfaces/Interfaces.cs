@@ -14,7 +14,7 @@ namespace OTDS.Bullets.Interfaces
 
     public interface ISimpleBulletFactoryService
     {
-        void FactoryContextBullet();
+        void TryFactoryContextBullet();
     }
 
     // ------------ lifetime chronometer

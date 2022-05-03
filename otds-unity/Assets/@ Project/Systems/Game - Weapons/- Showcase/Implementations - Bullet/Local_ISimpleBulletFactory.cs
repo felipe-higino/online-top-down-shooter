@@ -24,7 +24,7 @@ namespace OTDS.Bullets.Showcase
         private GameObject prefab => simpleBulletFactoryParams.BulletPrefab;
         private Transform location => simpleBulletFactoryParams.BulletSpawnLocation;
 
-        public void FactoryContextBullet()
+        public void TryFactoryContextBullet()
         {
             //instantiation
             var instance = prefabInstantiationService.TryInstantiate(prefab, location);

@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7289d9f2a7bea0040bc818befd345dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunToSpawn: {fileID: 11400000, guid: 10869ef6f72add749ae13f4572982737, type: 2}
+  gunToSpawn: {fileID: 11400000, guid: 6e385fd88a4f5db4ebb8d013c5e1ee7c, type: 2}
 --- !u!4 &19140933
 Transform:
   m_ObjectHideFlags: 0

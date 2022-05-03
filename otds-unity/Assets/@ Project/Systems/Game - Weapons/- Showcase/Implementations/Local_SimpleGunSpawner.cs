@@ -11,7 +11,7 @@ namespace OTDS.Weapons.Showcase
 {
     public class Local_SimpleGunSpawner : MonoBehaviour, Interfaces.ISimpleGunSpawner
     {
-        [Inject] private PlayerState.Interface.IPlayerState playerState;
+        [Inject] private PlayerState.Interfaces.IPlayerState playerState;
         [Inject] private Interfaces.ISimpleGunsDatabaseGetter databaseGetter;
         [Inject] private Utilities.Interfaces.IPrefabInstantiationService prefabInstantiationService;
 
@@ -35,6 +35,8 @@ namespace OTDS.Weapons.Showcase
             {
                 Time = gunToSpawn.Data.Data.BulletData.Data.SecondsLifetime
             };
+
+            OTDS.PlayerState.Showcase.S_ScenePlayerState.Instance.CurrentGun = simpleGun;
 
             S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;
             S_GunPlayerState.Instance.BulletSpawnLocation = bulletSpawnPoint;

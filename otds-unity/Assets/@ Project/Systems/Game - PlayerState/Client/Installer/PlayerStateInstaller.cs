@@ -8,7 +8,7 @@ namespace OTDS.PlayerState.Client
     {
         public override void InstallBindings()
         {
-            Container.Bind<Interface.IPlayerState>()
+            Container.Bind<Interfaces.IPlayerState>()
                 .FromComponentInHierarchy()
                 .AsSingle();
         }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OTDS.PlayerState.Interface
+namespace OTDS.PlayerState.Interfaces
 {
     /// <summary>
     /// server-side sensible data that can't be trusted to clients

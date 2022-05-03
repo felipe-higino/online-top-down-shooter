@@ -12,11 +12,10 @@ namespace OTDS.Weapons.Showcase
     public class BulletSpawner : MonoBehaviour
     {
         [Inject] private Bullets.Interfaces.ISimpleBulletFactoryService simpleBulletFactory;
-        // [Inject] private Interfaces.ISimpleGunsDatabaseGetter databaseGetter;
 
         private void TrySpawn()
         {
-            simpleBulletFactory.FactoryContextBullet();
+            simpleBulletFactory.TryFactoryContextBullet();
         }
 
 #if UNITY_EDITOR

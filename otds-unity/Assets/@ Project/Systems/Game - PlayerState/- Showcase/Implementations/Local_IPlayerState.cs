@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace OTDS.PlayerState.Showcase
 {
-    public class Local_IPlayerState : MonoBehaviour, Interface.IPlayerState
+    public class Local_IPlayerState : MonoBehaviour, Interfaces.IPlayerState
     {
         public SO_SimpleGun CurrentGun => S_ScenePlayerState.Instance.CurrentGun;
         public Transform GunSpawnPoint => S_ScenePlayerState.Instance.GunSpawnPoint;

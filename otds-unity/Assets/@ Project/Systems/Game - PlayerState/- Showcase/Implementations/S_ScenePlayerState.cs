@@ -6,7 +6,7 @@ using UnityEngine;
 namespace OTDS.PlayerState.Showcase
 {
     //sensible data being trusted to client (client singleton)
-    public class S_ScenePlayerState : MonoBehaviour, Interface.IPlayerState
+    public class S_ScenePlayerState : MonoBehaviour, Interfaces.IPlayerState
     {
 
         //------ IPlayerState
