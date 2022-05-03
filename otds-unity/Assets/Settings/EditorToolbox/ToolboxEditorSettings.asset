@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97690dbca7025a4ebeae4ac93229110, type: 3}
+  m_Name: ToolboxEditorSettings
+  m_EditorClassIdentifier: 
+  useToolboxHierarchy: 1
+  drawHorizontalLines: 1
+  showSelectionsCount: 0
+  rowDataTypes: 030000000000000001000000
+  useToolboxFolders: 1
+  largeIconScale: 0.8
+  smallIconScale: 1
+  largeIconPadding: {x: 0.026, y: 0.15}
+  smallIconPadding: {x: -0.014, y: -0.021}
+  customFolders:
+  - dataType: 1
+    name: Scenes
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 2231b055567e26747a3932dc173f1b8d, type: 3}
+    smallIcon: {fileID: 2800000, guid: 2231b055567e26747a3932dc173f1b8d, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Content
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 0e6fd3e5ce3c5ba40b5a903ee125755b, type: 3}
+    smallIcon: {fileID: 2800000, guid: 0e6fd3e5ce3c5ba40b5a903ee125755b, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Systems
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: eccf04c437a7346489ca60bc10d251b2, type: 3}
+    smallIcon: {fileID: 2800000, guid: eccf04c437a7346489ca60bc10d251b2, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Widgets
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 205f35b592c57764782004065c9d7d4b, type: 3}
+    smallIcon: {fileID: 2800000, guid: 205f35b592c57764782004065c9d7d4b, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Pieces
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: bc57cd94bde44ac488d06e7a070b1e7e, type: 3}
+    smallIcon: {fileID: 2800000, guid: bc57cd94bde44ac488d06e7a070b1e7e, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Sprites
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 8b9d4572a4181154cb23d95579a2fec9, type: 3}
+    smallIcon: {fileID: 2800000, guid: 8b9d4572a4181154cb23d95579a2fec9, type: 3}
+    iconName: 
+  - dataType: 1
+    name: 3D
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 267ee8f0660edc3408cc7d45cf87f3f8, type: 3}
+    smallIcon: {fileID: 2800000, guid: 267ee8f0660edc3408cc7d45cf87f3f8, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Plugins
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Resources
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Credentials
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Photon
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Samples
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Third Party Assets
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Settings
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 3d8f946e891cc8f4e81b1a296f8fb6be, type: 3}
+    smallIcon: {fileID: 2800000, guid: a65c70fcbe9ac0b4fbcbac4a0b67e64f, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Editor
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: ca744735eea12d84b8369b456104295c, type: 3}
+    smallIcon: {fileID: 2800000, guid: 0b7e8970cd9b4d548883dc5b4f4997c0, type: 3}
+    iconName: 
+  - dataType: 1
+    name: $ App Global Data
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: ca744735eea12d84b8369b456104295c, type: 3}
+    smallIcon: {fileID: 2800000, guid: 0b7e8970cd9b4d548883dc5b4f4997c0, type: 3}
+    iconName: 
+  - dataType: 1
+    name: '@ Project'
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 575f900c4ff32fa42a779d65da794c83, type: 3}
+    smallIcon: {fileID: 2800000, guid: 0379f5bc653a23045a15e41eb54d6db8, type: 3}
+    iconName: 
+  - dataType: 1
+    name: Audio
+    path: 
+    tooltip: 
+    iconType: 0
+    largeIcon: {fileID: 2800000, guid: 4716e98c41d647c42b3b09d0d3fb7146, type: 3}
+    smallIcon: {fileID: 2800000, guid: 4716e98c41d647c42b3b09d0d3fb7146, type: 3}
+    iconName: 
+  useToolboxDrawers: 0
+  decoratorDrawerHandlers:
+  - classReference: Toolbox.Editor.Drawers.BeginGroupAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.BeginHorizontalAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.BeginIndentAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.EditorButtonAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.EndGroupAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.EndHorizontalAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.EndIndentAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.HelpAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.HighlightAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.ImageAreaAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.IndentAreaAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.LabelAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.LineAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.SpaceAreaAttributeDrawer, Toolbox-Editor
+  conditionDrawerHandlers:
+  - classReference: Toolbox.Editor.Drawers.DisableAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.DisableIfAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.DisableInPlayModeAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.EnableIfAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.HideAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.HideIfAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.ShowIfAttributeDrawer, Toolbox-Editor
+  selfPropertyDrawerHandlers:
+  - classReference: Toolbox.Editor.Drawers.InLineEditorAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.RegexValueAttributeDrawer, Toolbox-Editor
+  listPropertyDrawerHandlers:
+  - classReference: Toolbox.Editor.Drawers.ReorderableListAttributeDrawer, Toolbox-Editor
+  - classReference: Toolbox.Editor.Drawers.ScrollableItemsAttributeDrawer, Toolbox-Editor
+  targetTypeDrawerHandlers: []

@@ -1,0 +1,7 @@
+{
+  "name": "com.otds.art-assets",
+  "displayName": "Art Assets",
+  "version": "0.0.1",
+  "description": "Art assets for online top down shooter",
+  "type": "library"
+}

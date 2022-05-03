@@ -1,0 +1,17 @@
+{
+    "name": "OTDS.Weapons.API",
+    "rootNamespace": "",
+    "references": [
+        "GUID:48e3b06ee1a38b540aad24784d65a977",
+        "GUID:90a3b95e544a5cd47bfc5b81552ed01a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

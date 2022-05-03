@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7527aa4fdfd09b49a725e2ffaee5ca3, type: 3}
+  m_Name: SO_MyInline
+  m_EditorClassIdentifier: 
+  myint: 68
+  myStringList:
+  - erer
+  - erer
+  - sf
+  - erer
+  otherNestedClass:
+    name: w4twtw
+    enumm: 1
+    myrange: 0
+  nestedArray:
+  - gameobjectref: {fileID: 0}
+    otherNestedClass:
+      name: 
+      enumm: 1
+      myrange: 0
+    otherNestedClassArray:
+    - name: 
+      enumm: 0
+      myrange: 0
+  - gameobjectref: {fileID: 0}
+    otherNestedClass:
+      name: 
+      enumm: 0
+      myrange: 0
+    otherNestedClassArray:
+    - name: 
+      enumm: 0
+      myrange: 0
+    - name: 
+      enumm: 0
+      myrange: 0
+  - gameobjectref: {fileID: 0}
+    otherNestedClass:
+      name: 
+      enumm: 0
+      myrange: 0.6079999804496765
+    otherNestedClassArray:
+    - name: 
+      enumm: 0
+      myrange: 0
+    - name: 
+      enumm: 0
+      myrange: 0
+  myrange1: 0
+  _myrange1: 0
