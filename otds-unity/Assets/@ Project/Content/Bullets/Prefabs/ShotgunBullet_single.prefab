@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 931331122472821179}
   - component: {fileID: 931331122472821176}
   - component: {fileID: 5015211949878621813}
+  - component: {fileID: -7898060974813040896}
   m_Layer: 0
   m_Name: ShotgunBullet_single
   m_TagString: Untagged
@@ -96,6 +97,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletData: {fileID: 11400000, guid: cd2fa82c07b6b0b419b3d2842436b54c, type: 2}
   rigidBody: {fileID: 931331122472821179}
+--- !u!114 &-7898060974813040896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931331122472821158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717a02054ef2699498e6bd4234fd7995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _containerSource: 0
 --- !u!1 &6045817466686084299
 GameObject:
   m_ObjectHideFlags: 0

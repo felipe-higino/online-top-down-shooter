@@ -35,27 +35,15 @@ namespace OTDS.Weapons.Showcase
             {
                 Time = gunToSpawn.Data.Data.BulletData.Data.SecondsLifetime
             };
-            var impulseParams = new ImpulseParams()
-            {
-                ForceScale = gunToSpawn.Data.Data.BulletData.Data.ForceScale
-            };
 
             S_GunPlayerState.Instance.BulletPrefab = bulletPrefab;
             S_GunPlayerState.Instance.BulletSpawnLocation = bulletSpawnPoint;
             S_GunPlayerState.Instance.ChronometerParams = chronometerParams;
-            S_GunPlayerState.Instance.ImpulseParams = impulseParams;
         }
-
+        //TODO: REMOVE
         private class ChronometerParams : Bullets.Interfaces.ILifetimeChronometerParams
         {
             public float Time { set; get; }
-        }
-
-        //TODO: remove
-        private class ImpulseParams : Bullets.Interfaces.IAddBulletImpulseServiceParams
-        {
-            public float ForceScale { get; set; }
-            public Rigidbody2D Rigidbody { get; set; }
         }
 
 #if UNITY_EDITOR

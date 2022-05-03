@@ -10,7 +10,7 @@ namespace OTDS.Bullets.Client
                 .FromComponentInHierarchy()
                 .AsSingle();
 
-            Container.Bind<Interfaces.IAddBulletImpulseService>()
+            Container.Bind<Interfaces.IAddForceService>()
                 .FromComponentInHierarchy()
                 .AsSingle();
 

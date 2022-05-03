@@ -8,8 +8,10 @@ namespace OTDS.Bullets.Interfaces
     {
         GameObject BulletPrefab { get; }
         Transform BulletSpawnLocation { get; }
+        //TODO: remove
         ILifetimeChronometerParams ChronometerParams { get; }
-        IAddBulletImpulseServiceParams ImpulseParams { get; }
+        //TODO: remove
+        IAddForceServiceParams ImpulseParams { get; }
     }
 
     public interface ISimpleBulletFactoryService
@@ -17,18 +19,18 @@ namespace OTDS.Bullets.Interfaces
         void FactoryContextBullet();
     }
 
-    // ------------ bullet impulse 
+    // ------------ add force 
     //TODO: remove
-    public interface IAddBulletImpulseServiceParams
+    public interface IAddForceServiceParams
     {
         float ForceScale { get; }
         Rigidbody2D Rigidbody { get; set; }
     }
 
     //TODO: remove
-    public interface IAddBulletImpulseService
+    public interface IAddForceService
     {
-        void AddBulletImpulse(IAddBulletImpulseServiceParams parameters);
+        void AddForce(IAddForceServiceParams parameters);
     }
 
     // ------------ lifetime chronometer

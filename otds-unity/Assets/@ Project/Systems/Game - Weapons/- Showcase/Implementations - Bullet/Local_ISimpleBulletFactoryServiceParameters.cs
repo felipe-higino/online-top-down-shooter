@@ -10,7 +10,7 @@ namespace OTDS.Weapons.Showcase
         public GameObject BulletPrefab => S_GunPlayerState.Instance.BulletPrefab;
         public Transform BulletSpawnLocation => S_GunPlayerState.Instance.BulletSpawnLocation;
         public ILifetimeChronometerParams ChronometerParams => S_GunPlayerState.Instance.ChronometerParams;
-        public IAddBulletImpulseServiceParams ImpulseParams => S_GunPlayerState.Instance.ImpulseParams;
+        public IAddForceServiceParams ImpulseParams => S_GunPlayerState.Instance.ImpulseParams;
     }
 
 }

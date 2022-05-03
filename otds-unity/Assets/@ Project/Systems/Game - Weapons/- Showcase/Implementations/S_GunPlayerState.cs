@@ -10,7 +10,7 @@ namespace OTDS.Weapons.Showcase
         [field: SerializeField] public GameObject BulletPrefab { set; get; }
         [field: SerializeField] public Transform BulletSpawnLocation { set; get; }
         public ILifetimeChronometerParams ChronometerParams { set; get; }
-        public IAddBulletImpulseServiceParams ImpulseParams { set; get; }
+        public IAddForceServiceParams ImpulseParams { set; get; }
 
         public static S_GunPlayerState Instance { get; private set; }
         private void Awake()

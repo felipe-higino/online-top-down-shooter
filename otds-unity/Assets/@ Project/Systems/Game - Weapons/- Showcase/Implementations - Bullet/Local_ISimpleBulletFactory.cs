@@ -17,9 +17,9 @@ namespace OTDS.Bullets.Showcase
         public ILifetimeChronometerService lifetimeChronometerService { get; }
         private ILifetimeChronometerParams m_chronometerParams => simpleBulletFactoryParams.ChronometerParams;
 
-        [Inject]
-        public IAddBulletImpulseService addBulletImpulseService { get; }
-        private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
+        // [Inject]
+        // public IAddBulletImpulseService addBulletImpulseService { get; }
+        // private IAddBulletImpulseServiceParams m_impulseParams => simpleBulletFactoryParams.ImpulseParams;
 
         private GameObject prefab => simpleBulletFactoryParams.BulletPrefab;
         private Transform location => simpleBulletFactoryParams.BulletSpawnLocation;
