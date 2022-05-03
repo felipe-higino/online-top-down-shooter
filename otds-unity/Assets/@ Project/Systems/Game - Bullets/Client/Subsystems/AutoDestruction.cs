@@ -19,11 +19,13 @@ namespace OTDS.Bullets.Client
         {
             var parameters = new Parameters { Time = bulletData.Data.SecondsLifetime };
 
+            var gameObjectRef = this.gameObject;
+
             chronometerService.StartTimer(
                 parameters: parameters,
                 End: (x) =>
                 {
-                    prefabInstantiationService.TryDestroy(this.gameObject);
+                    prefabInstantiationService.TryDestroy(gameObjectRef);
                 }
             );
         }

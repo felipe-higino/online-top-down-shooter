@@ -9,9 +9,19 @@ namespace OTDS.Network.PhotonComponents.Implementations
 
     public class PUN_IPrefabInstantiationService : MonoBehaviour, IPrefabInstantiationService
     {
-        public void TryDestroy(GameObject gameObject)
+        public void TryDestroy(GameObject gameObjectInstance)
         {
-            PhotonNetwork.Destroy(gameObject);
+            if (null == gameObjectInstance)
+                return;
+
+            var photonView = gameObjectInstance.GetComponent<PhotonView>();
+            if (null == photonView)
+                return;
+
+            if (photonView.IsMine)
+            {
+                PhotonNetwork.Destroy(gameObjectInstance);
+            }
         }
 
         public GameObject TryInstantiate(GameObject prefab, Transform location)
